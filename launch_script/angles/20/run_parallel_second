@@ -1,0 +1,8 @@
+echo "started parallel... Age $1"
+./run_singular_app2 110 120 $1 > report$1_110-120.dat &
+./run_singular_app2 130 140 $1 > report$1_130-140.dat &
+./run_singular_app2 150 160 $1 > report$1_150-160.dat &
+./run_singular_app2 170 180 $1 > report$1_170-180.dat &
+./run_singular_app2 190 200 $1 > report$1_190-200.dat &
+wait
+echo "Ended!\n"

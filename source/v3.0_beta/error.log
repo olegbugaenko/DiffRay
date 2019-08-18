@@ -1,0 +1,96 @@
+In file included from main.cpp:2:0:
+reader.h:9:51: error: ‘std::function’ has not been declared
+     static double** read_file_array(FILE *MF,std::function<void(int)> oncalcrows,int maxsize=255,int nskiprows=0, int nskiprcols=0);
+                                                   ^
+reader.h:9:59: error: expected ‘,’ or ‘...’ before ‘<’ token
+     static double** read_file_array(FILE *MF,std::function<void(int)> oncalcrows,int maxsize=255,int nskiprows=0, int nskiprcols=0);
+                                                           ^
+main.cpp: In function ‘int main()’:
+main.cpp:53:46: error: invalid conversion from ‘int (*)(int)’ to ‘int’ [-fpermissive]
+  CReader::read_file_array(F,CReader::callable);
+                                              ^
+In file included from main.cpp:2:0:
+reader.h:9:21: error:   initializing argument 2 of ‘static double** CReader::read_file_array(FILE*, int)’ [-fpermissive]
+     static double** read_file_array(FILE *MF,std::function<void(int)> oncalcrows,int maxsize=255,int nskiprows=0, int nskiprcols=0);
+                     ^
+main.cpp:58:63: error: no matching function for call to ‘CReader::read_file_array(FILE*&, int (&)(int), int, int, int)’
+  resarr = CReader::read_file_array(F,CReader::callable,255,1,1);
+                                                               ^
+main.cpp:58:63: note: candidate is:
+In file included from main.cpp:2:0:
+reader.h:9:21: note: static double** CReader::read_file_array(FILE*, int)
+     static double** read_file_array(FILE *MF,std::function<void(int)> oncalcrows,int maxsize=255,int nskiprows=0, int nskiprcols=0);
+                     ^
+reader.h:9:21: note:   candidate expects 2 arguments, 5 provided
+In file included from reader.cpp:1:0:
+reader.h:9:51: error: ‘std::function’ has not been declared
+     static double** read_file_array(FILE *MF,std::function<void(int)> oncalcrows,int maxsize=255,int nskiprows=0, int nskiprcols=0);
+                                                   ^
+reader.h:9:59: error: expected ‘,’ or ‘...’ before ‘<’ token
+     static double** read_file_array(FILE *MF,std::function<void(int)> oncalcrows,int maxsize=255,int nskiprows=0, int nskiprcols=0);
+                                                           ^
+reader.cpp: In static member function ‘static int CReader::calc_cols_number(char*)’:
+reader.cpp:77:47: warning: too many arguments for format [-Wformat-extra-args]
+  while ( sscanf(ptr, "%s[\t\r\n]", strdata, &n) == 1 )
+                                               ^
+reader.cpp: At global scope:
+reader.cpp:88:49: error: ‘std::function’ has not been declared
+ double** CReader::read_file_array(FILE *MF,std::function<void(int)> oncalcrows, int maxsize, int nskiprows, int nskipcols)
+                                                 ^
+reader.cpp:88:57: error: expected ‘,’ or ‘...’ before ‘<’ token
+ double** CReader::read_file_array(FILE *MF,std::function<void(int)> oncalcrows, int maxsize, int nskiprows, int nskipcols)
+                                                         ^
+reader.cpp: In static member function ‘static double** CReader::read_file_array(FILE*, int)’:
+reader.cpp:94:16: error: ‘oncalcrows’ was not declared in this scope
+  oncalcrows(num);
+                ^
+reader.cpp:98:25: error: ‘maxsize’ was not declared in this scope
+  printf("maxsize: %d\n",maxsize);
+                         ^
+reader.cpp:106:14: error: ‘nskiprows’ was not declared in this scope
+  while(irows<nskiprows && !feof(MF))
+              ^
+reader.cpp:131:48: warning: too many arguments for format [-Wformat-extra-args]
+   while ( sscanf(ptr, "%s[\t\r\n]", strdata, &n) == 1 )
+                                                ^
+reader.cpp:138:17: error: ‘nskipcols’ was not declared in this scope
+       if(icols>=nskipcols)
+                 ^
+reader.cpp:103:9: warning: unused variable ‘val’ [-Wunused-variable]
+  double val;
+         ^
+reader.cpp: In static member function ‘static int CReader::callable(int)’:
+reader.cpp:155:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+reader.cpp: In static member function ‘static char** CReader::read_commands(FILE*)’:
+reader.cpp:28:23: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+   fgets(string,500,MF);
+                       ^
+reader.cpp:31:24: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+    fgets(string,500,MF);
+                        ^
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 0 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 1 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 2 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 3 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 4 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 5 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 6 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 7 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 8 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 9 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 10 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 11 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 12 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 13 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 14 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 15 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 16 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 17 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 18 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 19 has invalid symbol index 21
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_line): relocation 0 has invalid symbol index 2
+/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status

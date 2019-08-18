@@ -1,0 +1,28 @@
+echo "started angle 21"
+./run_parallel_first 21
+./run_parallel_second 21
+echo "Ended!\n"
+echo "started angle 22"
+./run_parallel_first 22
+./run_parallel_second 22
+echo "Ended!\n"
+echo "started angle 23"
+./run_parallel_first 23
+./run_parallel_second 23
+echo "Ended!\n"
+echo "started angle 24"
+./run_parallel_first 24
+./run_parallel_second 24
+echo "Ended!\n"
+echo "started angle 25"
+./run_parallel_first 25
+./run_parallel_second 25
+echo "Ended!\n"
+echo "started angle 26"
+./run_parallel_first 26
+./run_parallel_second 26
+echo "Ended!\n"
+echo "started angle 27"
+./run_parallel_first 27
+./run_parallel_second 27
+echo "Ended!\n"

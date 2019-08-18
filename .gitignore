@@ -1,0 +1,5 @@
+result/*
+data/*
+work/*
+!data/database
+!data/bands

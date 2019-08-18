@@ -1,0 +1,45 @@
+#!/usr/bin/perl -w
+$minage = $ARGV[0];
+$maxage = $ARGV[1];
+$angle = $ARGV[2];
+mkdir "../../../result/ngc/ism0p0/anglesSV/";
+mkdir "../../../result/ngc/ism0p0/anglesSV/$angle";
+for($iage=$minage;$iage<=$maxage;$iage += 10)
+{
+    #if($iage == 10 
+#	|| $iage == 70 
+#	|| $iage == 140
+#    )
+    {
+	mkdir "../../../result/ngc/ism0p0/anglesSV/$angle/$iage";
+	open(COMMANDS, "> ../../../commands$iage.ini")||
+				die "CANNOT OPEN COMMANDS FILE\n";
+	$angle_rad = $angle*3.14/180.0;
+	print COMMANDS "print directory ../../../result/ngc/ism0p0/anglesSV/$angle/$iage\n";
+	print COMMANDS "input directory ../../../data/ngc1569_nograin\n";
+	print COMMANDS "input database ../../../data/database\n";
+	print COMMANDS "object theta $angle_rad\n";
+	print COMMANDS "object phi 1.1312\n";
+	print COMMANDS "distance cm 25.01754\n";
+	print COMMANDS "object age $iage\n";
+	print COMMANDS "integration precision 0.005\n";
+	print COMMANDS "integration maxiterations 12\n";
+	print COMMANDS "apperture add -0.0000356 -0.0000146 0.000014537 0.000014537\n";
+	print COMMANDS "apperture add -0.0000331 -0.0000146 0.000014537 0.000014537\n";
+	print COMMANDS "apperture add -0.0000291 -0.0000146 0.000014537 0.000014537\n";
+	print COMMANDS "apperture add -0.0000356 -0.000086 0.000014537 0.000014537\n";
+	print COMMANDS "apperture add -0.0000331 -0.000086 0.000014537 0.000014537\n";
+	print COMMANDS "apperture add -0.0000291 -0.000086 0.000014537 0.000014537\n";
+	print COMMANDS "calc abundances\n";
+	print COMMANDS "calc lines\n";
+	print COMMANDS "ignore opacity\n";
+	#print COMMANDS "apperture add 0 0 0.000014537 0.000014537\n";
+	#print COMMANDS "apperture add 0.000687 0.000014 0.000014537 0.000014537\n";
+	#print COMMANDS "apperture add -0.000405 -0.000007 0.000014537 0.000014537\n";
+	#print COMMANDS "apperture add 0 0.000007 0.000014537 0.000014537\n";
+	#print COMMANDS "apperture add 0 0.004098 0.000014537 0.000014537\n";
+	#print COMMANDS "apperture add 0.000470 0.00042 0.000014537 0.000014537\n";
+	close (COMMANDS);
+	system "./../../../DiffRay3D.exe ../../../commands$iage.ini";
+    }
+}

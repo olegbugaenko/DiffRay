@@ -1,0 +1,1840 @@
+Reading commands from ../../../commands10.ini
+
+CMD:------------print------------------
+print
+CMD:------------input------------------
+input
+DIR: ../../../data/ngc1569_nograin
+CMD:------------input------------------
+input
+DIR: ../../../data/ngc1569_nograin
+CMD:------------object------------------
+object
+CMD:------------distance------------------
+distance
+25.01754
+DIST: 2.501754e+01CMD:------------object------------------
+object
+CMD:------------integration------------------
+CMD:------------integration------------------
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------calc------------------
+CMD:------------calc------------------
+CMD:------------calc------------------
+output: ../../../result/ngc/ism0p0/angles/20/10
+input: ../../../data/ngc1569_nograin
+age: 10.00; app-width: 6.283185x3.141593
+reader it self
+start reading: 261120
+ready...
+N: 632
+632
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 629
+629
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 608
+608
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 196
+196
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 205
+205
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 206
+206
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 211
+211
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 210
+210
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 216
+216
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 223
+223
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 221
+221
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 226
+226
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 227
+227
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 233
+233
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 234
+234
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 234
+234
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 236
+236
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 240
+240
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 235
+235
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 237
+237
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+nSectors[0] = 632 (1.736760e+19 - 6.999105e+21)
+nSectors[1] = 629 (1.736760e+19 - 6.999105e+21)
+nSectors[2] = 608 (1.736760e+19 - 6.999105e+21)
+nSectors[3] = 196 (1.736760e+19 - 6.999105e+21)
+nSectors[4] = 205 (1.736760e+19 - 6.999105e+21)
+nSectors[5] = 206 (1.736760e+19 - 6.999105e+21)
+nSectors[6] = 211 (1.736760e+19 - 6.999105e+21)
+nSectors[7] = 210 (1.736760e+19 - 6.999105e+21)
+nSectors[8] = 216 (1.736760e+19 - 6.999105e+21)
+nSectors[9] = 223 (1.736760e+19 - 6.999105e+21)
+nSectors[10] = 221 (1.736760e+19 - 6.999105e+21)
+nSectors[11] = 226 (1.736760e+19 - 6.999105e+21)
+nSectors[12] = 227 (1.736760e+19 - 6.999105e+21)
+nSectors[13] = 233 (1.736760e+19 - 6.999105e+21)
+nSectors[14] = 234 (1.736760e+19 - 6.999105e+21)
+nSectors[15] = 234 (1.736760e+19 - 6.999105e+21)
+nSectors[16] = 236 (1.736760e+19 - 6.999105e+21)
+nSectors[17] = 240 (1.736760e+19 - 6.999105e+21)
+nSectors[18] = 235 (1.736760e+19 - 6.999105e+21)
+nSectors[19] = 237 (1.736760e+19 - 6.999105e+21)
+READING LINES
+dbentry
+Database file: ../../../data/database/line_ch.data
+start reading: 15
+ready...
+N: 55869
+start reading: 15
+ready...
+N: 55869
+read database... TOTL  4861A
+
+TO: TOTL  4861A
+ TOTL  1216A
+
+TO: TOTL  1216A
+ Inci     0 
+
+TO: Inci     0 
+ TotH     0 
+
+TO: TotH     0 
+ TotC     0 
+
+TO: TotC     0 
+ BFH1     0 
+
+TO: BFH1     0 
+ BFHx     0 
+
+TO: BFHx     0 
+ Line     0 
+
+TO: Line     0 
+ BFHe     0 
+
+TO: BFHe     0 
+ TotM     0 
+
+TO: TotM     0 
+ pair     0 
+
+TO: pair     0 
+55869/55869
+Start
+Lines 1
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 633
+633
+calced
+-----
+-----
+TOTL  4861A  ->  9
+TOTL  1216A  ->  21
+Inci  1215A  ->  33
+H  1  6563A  ->  345
+He 2  4686A  ->  237
+He 2  4686A  ->  237
+He 2  4686A  ->  237
+He 2  4686A  ->  237
+He 2  4686A  ->  237
+He 1  3889A  ->  165
+He 1  7065A  ->  225
+He 1  5876A  ->  201
+He 1  4471A  ->  189
+He 1  4026A  ->  177
+He 1  6678A  ->  213
+TOTL  1909A  ->  273
+C3 R  1909A  ->  285
+N  2  6584A  ->  333
+N  2  6548A  ->  321
+N  4 765.0A  ->  297
+TOTL  3727A  ->  129
+O II  3729A  ->  117
+O II  3726A  ->  105
+O  3  5007A  ->  57
+O  3  4959A  ->  45
+TOTL  4363A  ->  69
+Rec   4363A  ->  81
+Ne 3  3869A  ->  249
+Ne 5  3426A  ->  93
+S  2  4074A  ->  261
+S II  6731A  ->  153
+S II  6716A  ->  141
+N  3 243.0A  ->  309
+0 --- 9 (29)
+1 --- 21 (29)
+37 --- 33 (29)
+11026 --- 45 (29)
+11025 --- 57 (29)
+11029 --- 69 (29)
+11031 --- 81 (29)
+11112 --- 93 (29)
+10987 --- 105 (29)
+10986 --- 117 (29)
+10980 --- 129 (29)
+11544 --- 141 (29)
+11543 --- 153 (29)
+4651 --- 165 (29)
+4721 --- 177 (29)
+4711 --- 189 (29)
+4701 --- 201 (29)
+4741 --- 213 (29)
+4696 --- 225 (29)
+1910 --- 237 (29)
+11105 --- 249 (29)
+11541 --- 261 (29)
+10779 --- 273 (29)
+10787 --- 285 (29)
+10941 --- 297 (29)
+14031 --- 309 (29)
+10870 --- 321 (29)
+10869 --- 333 (29)
+624 --- 345 (29)
+TTTTT
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 2
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 630
+630
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 3
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 609
+609
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 4
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 197
+197
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 5
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 206
+206
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 6
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 207
+207
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 7
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 212
+212
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 8
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 211
+211
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 9
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 217
+217
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 10
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 224
+224
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 11
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 222
+222
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 12
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 227
+227
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 13
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 228
+228
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 14
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 234
+234
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 15
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 235
+235
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 16
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 235
+235
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 17
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 237
+237
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 18
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 241
+241
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 19
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 236
+236
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 20
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 238
+238
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Reading mesh
+initSectorials
+reader it self
+start reading: 600
+ready...
+N: 2704
+2704
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen mesh
+Readen mesh 2
+Mesh count: 2704
+1.052320e-08 - 3.172460e-03 - 1.007660e+01
+Reading cont 0
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 632
+632
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo1_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo1_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 632
+632
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 1
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 629
+629
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo2_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo2_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 629
+629
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 2
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 608
+608
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo3_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo3_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 608
+608
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 3
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 196
+196
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo4_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo4_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 196
+196
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 4
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 205
+205
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo5_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo5_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 205
+205
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 5
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 206
+206
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo6_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo6_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 206
+206
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 6
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 211
+211
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo7_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo7_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 211
+211
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 7
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 210
+210
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo8_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo8_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 210
+210
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 8
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 216
+216
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo9_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo9_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 216
+216
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 9
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 223
+223
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo10_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo10_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 223
+223
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 10
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 221
+221
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo11_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo11_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 221
+221
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 11
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 226
+226
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo12_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo12_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 226
+226
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 12
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 227
+227
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo13_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo13_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 227
+227
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 13
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 233
+233
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo14_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo14_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 233
+233
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 14
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 234
+234
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo15_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo15_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 234
+234
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 15
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 234
+234
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo16_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo16_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 234
+234
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 16
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 236
+236
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo17_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo17_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 236
+236
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 17
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 240
+240
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo18_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo18_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 240
+240
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 18
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 235
+235
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo19_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo19_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 235
+235
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+Reading cont 19
+FUNTION readEmissivity
+Reader
+reader it self
+start reading: 131072
+ready...
+N: 237
+237
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+Readen
+reading opacity...
+CNS: 20
+../../../data/ngc1569_nograin/Opac_Cont_SectorNo20_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading trans...
+CNS: 20
+../../../data/ngc1569_nograin/Emis_Trans_SectorNo20_Age10.00Myr.dat
+WARNING: FILE NOT FOUNDreading abunds...
+Reading abundances
+reader it self
+start reading: 2550
+ready...
+N: 237
+237
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+READING INWARD FLUXES
+ContCount: 2704!
+nbands: 0
+App to ../../../result/ngc/ism0p0/angles/20/10/app_0
+initIteration
+doIterationInit Integration: 1,14
+nPhi: 29; nTheta: 15
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,-7.017862e-06,1.999999e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,-7.017862e-06,2.000000e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,-7.017862e-06,2.000000e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,-6.516586e-06,1.999999e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,-6.015310e-06,2.000001e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,-5.012759e-06,2.000000e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,-4.010207e-06,1.999999e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,-3.508931e-06,2.000001e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,-2.506379e-06,2.000000e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,-1.503828e-06,1.999999e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,-1.002552e-06,2.000001e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,1.694066e-21,1.999999e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,1.694066e-21,2.000000e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,1.694066e-21,2.000000e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,5.012759e-07,2.000000e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,1.503828e-06,1.999999e+01]
+[-4.249008e+24,5.203534e+08,-9.505714e+24]
+[0.000000e+00,2.00Reading commands from ../../../commands20.ini
+
+CMD:------------print------------------
+print
+CMD:------------input------------------
+input
+DIR: ../../../data/ngc1569_nograin
+CMD:------------input------------------
+input
+DIR: ../../../data/ngc1569_nograin
+CMD:------------object------------------
+object
+CMD:------------distance------------------
+distance
+25.01754
+DIST: 2.501754e+01CMD:------------object------------------
+object
+CMD:------------integration------------------
+CMD:------------integration------------------
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------apperture------------------
+aperture
+Apperture added
+CMD:------------calc------------------
+CMD:------------calc------------------
+CMD:------------calc------------------
+output: ../../../result/ngc/ism0p0/angles/20/20
+input: ../../../data/ngc1569_nograin
+age: 20.00; app-width: 6.283185x3.141593
+reader it self
+start reading: 261120
+ready...
+N: 719
+719
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 681
+681
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 695
+695
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 696
+696
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 282
+282
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 281
+281
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 287
+287
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 295
+295
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 298
+298
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 308
+308
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 310
+310
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 310
+310
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 312
+312
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 316
+316
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 311
+311
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 316
+316
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 310
+310
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 291
+291
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 325
+325
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+reader it self
+start reading: 261120
+ready...
+N: 335
+335
+calced
+-=-=-=-=-=
+-=-=-=-=-=|||
+nSectors[0] = 719 (1.736760e+19 - 6.999105e+21)
+nSectors[1] = 681 (1.736760e+19 - 6.999105e+21)
+nSectors[2] = 695 (1.736760e+19 - 6.999105e+21)
+nSectors[3] = 696 (1.736760e+19 - 6.999105e+21)
+nSectors[4] = 282 (1.736760e+19 - 6.999105e+21)
+nSectors[5] = 281 (1.736760e+19 - 6.999105e+21)
+nSectors[6] = 287 (1.736760e+19 - 6.999105e+21)
+nSectors[7] = 295 (1.736760e+19 - 6.999105e+21)
+nSectors[8] = 298 (1.736760e+19 - 6.999105e+21)
+nSectors[9] = 308 (1.736760e+19 - 6.999105e+21)
+nSectors[10] = 310 (1.736760e+19 - 6.999105e+21)
+nSectors[11] = 310 (1.736760e+19 - 6.999105e+21)
+nSectors[12] = 312 (1.736760e+19 - 6.999105e+21)
+nSectors[13] = 316 (1.736760e+19 - 6.999105e+21)
+nSectors[14] = 311 (1.736760e+19 - 6.999105e+21)
+nSectors[15] = 316 (1.736760e+19 - 6.999105e+21)
+nSectors[16] = 310 (1.736760e+19 - 6.999105e+21)
+nSectors[17] = 291 (1.736760e+19 - 6.999105e+21)
+nSectors[18] = 325 (1.736760e+19 - 6.999105e+21)
+nSectors[19] = 335 (1.736760e+19 - 6.999105e+21)
+READING LINES
+dbentry
+Database file: ../../../data/database/line_ch.data
+start reading: 15
+ready...
+N: 55869
+start reading: 15
+ready...
+N: 55869
+read database... TOTL  4861A
+
+TO: TOTL  4861A
+ TOTL  1216A
+
+TO: TOTL  1216A
+ Inci     0 
+
+TO: Inci     0 
+ TotH     0 
+
+TO: TotH     0 
+ TotC     0 
+
+TO: TotC     0 
+ BFH1     0 
+
+TO: BFH1     0 
+ BFHx     0 
+
+TO: BFHx     0 
+ Line     0 
+
+TO: Line     0 
+ BFHe     0 
+
+TO: BFHe     0 
+ TotM     0 
+
+TO: TotM     0 
+ pair     0 
+
+TO: pair     0 
+55869/55869
+Start
+Lines 1
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 720
+720
+calced
+-----
+-----
+TOTL  4861A  ->  9
+TOTL  1216A  ->  21
+Inci  1215A  ->  33
+H  1  6563A  ->  345
+He 2  4686A  ->  237
+He 2  4686A  ->  237
+He 2  4686A  ->  237
+He 2  4686A  ->  237
+He 2  4686A  ->  237
+He 1  3889A  ->  165
+He 1  7065A  ->  225
+He 1  5876A  ->  201
+He 1  4471A  ->  189
+He 1  4026A  ->  177
+He 1  6678A  ->  213
+TOTL  1909A  ->  273
+C3 R  1909A  ->  285
+N  2  6584A  ->  333
+N  2  6548A  ->  321
+N  4 765.0A  ->  297
+TOTL  3727A  ->  129
+O II  3729A  ->  117
+O II  3726A  ->  105
+O  3  5007A  ->  57
+O  3  4959A  ->  45
+TOTL  4363A  ->  69
+Rec   4363A  ->  81
+Ne 3  3869A  ->  249
+Ne 5  3426A  ->  93
+S  2  4074A  ->  261
+S II  6731A  ->  153
+S II  6716A  ->  141
+N  3 243.0A  ->  309
+0 --- 9 (29)
+1 --- 21 (29)
+37 --- 33 (29)
+11026 --- 45 (29)
+11025 --- 57 (29)
+11029 --- 69 (29)
+11031 --- 81 (29)
+11112 --- 93 (29)
+10987 --- 105 (29)
+10986 --- 117 (29)
+10980 --- 129 (29)
+11544 --- 141 (29)
+11543 --- 153 (29)
+4651 --- 165 (29)
+4721 --- 177 (29)
+4711 --- 189 (29)
+4701 --- 201 (29)
+4741 --- 213 (29)
+4696 --- 225 (29)
+1910 --- 237 (29)
+11105 --- 249 (29)
+11541 --- 261 (29)
+10779 --- 273 (29)
+10787 --- 285 (29)
+10941 --- 297 (29)
+14031 --- 309 (29)
+10870 --- 321 (29)
+10869 --- 333 (29)
+624 --- 345 (29)
+TTTTT
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 2
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 682
+682
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 3
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 696
+696
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 4
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 697
+697
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 5
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 283
+283
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 6
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 282
+282
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 7
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 288
+288
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 8
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 296
+296
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 9
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 299
+299
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 10
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 309
+309
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 11
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 311
+311
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 12
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 311
+311
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 13
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 313
+313
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 14
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 317
+317
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 15
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 312
+312
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 16
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 317
+317
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 17
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 311
+311
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 18
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 292
+292
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines 19
+Reading lines
+reader it self
+start reading: 2550
+ready...
+N: 326
+326
+calced
+-----
+-----
+-=-=-=-=-=
+-=-=-=-=-=|||
+here
+Readen
+Lines

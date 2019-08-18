@@ -1,0 +1,3 @@
+./run_singular 10 20 21 > report_10-20.dat &
+./run_singular 30 40 21 > report_30-40.dat
+

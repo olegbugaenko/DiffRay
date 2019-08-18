@@ -1,0 +1,222 @@
+\documentclass[a4paper]{article}
+\usepackage{epsfig,amsmath,amsfonts,amssymb,setspace,multirow,textcomp}
+\usepackage[T1]{fontenc}
+\textheight 23cm \textwidth 18cm \hoffset= 0mm \voffset= 0cm
+\topmargin -1cm \oddsidemargin -8mm \evensidemargin 0mm \columnsep = 4ex
+% end of preamble
+
+\begin{document}
+\section*{\sc introduction}
+\indent \indent Physical conditions in nebulae (planetary nebulae, large HII regions) 
+are usually obtained using so called diagnostic method, that allows to obtain average 
+the electron temperature $T_e$ and density $N_e$ from different emission line intensities ratios 
+(see, f.e., DIAGN method \cite{DIAGN}). However, in case of diagnostic methods 
+obtained $T_e$ and $N_e$ are constant within investigated ionization zone. 
+For detailed analysis of the ionization structure of nebular environment 
+the transfer of the ionizing radiation taking into account all elementary processes
+in nebular plasmas important for such transfer should be calculated.
+Such calculations are performed during PhM of nebular environment.
+
+In case of nebulae with compact ionization source (f.e star, compact stars cluster, etc) 
+radiation can be separated into two components:
+\begin{enumerate}
+\item Direct component, comming from ionizing source;
+\item Diffuse component, originating from nebular gas.
+\end{enumerate}
+
+While transfer of the direct component of the ionizing radiation can be easy calculated
+(because of no source terms), the diffuse radiation transfer calculation 
+is a very time consuming even for modern supercomputers, 
+since it requires iterative process of ionizing radiation flux integration over volume 
+in each elementary cell of nebula environment \ref{figDet}. For time economy purpouses approximate methods 
+of diffuse radiation calculation are frequently used. The most popular are {\b OTS} approximation, 
+that assumes that ionizing radiation is consumed into the same volume where it whas emited, 
+and {\b Outward Only} approximation, that assumes that ionizing radiation is propogated 
+in radial direction, from ionizing source to outer surface of object. However, OTS method 
+is good only in case of optically thick objects. Outward only approximation is more precise, 
+however it can be inacurate in case of objects with complicated morphology. 
+For example, dense clumps can cause the origination of shaded regions behind of them.
+Non-radial DIR can play main role in formation of the ionization structure in these shaded
+regions.
+
+
+
+
+
+To avoid usage of approximate methods for DIR calculation and reduce time, 
+required for PhM we developed {\b DiffRay3D}) software, that allows to integrate
+radiation fluxes using 2D or 3D emissivity maps, and, as result, to implement 
+method for detailed diffuse radiation calculation, described in \cite{JPS2016}
+and displayed in Figure \ref{our_approach}.
+
+\begin{figure}[!h]
+\begin{minipage}[t]{.85\linewidth}
+\centering
+\epsfig{file = GOL_MAL.eps,width = .45\linewidth}
+\caption{Detailed method for diffuse radiation calculation}\label{figDet}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\begin{minipage}[t]{.85\linewidth}
+\epsfig{file = our_algo.eps,width = .85\linewidth}
+\caption{Our approach algorithm}\label{our_approach}
+\end{minipage}
+\hfill
+\end{figure}
+
+\indent1 - Reading data, such as required precision, maximum iterations, etc.\\
+\indent2 - Running PhM code in Outward Only mode, generating and saving emissivity and opacity maps.\\
+\indent3 - Running integration procedure using previously generated maps.\\
+\indent4 - Running PhM code, using fluxes, obtained after step 3. Generating and saving new emissivity and opacity maps.\\
+\indent5 - Check difference between electron temperatures obtained from current iteration and the previous one. Once difference is greater than is required by precision, pointed in 1, then returning to step 3.\\
+\indent6 - Printing fluxes and ionization structure, obtained from PhM on last iteration.\\
+
+
+\section{DiffRay3D. General algorithm and limitations}
+
+Current DiffRay3D version provides tools for radiation fluxes integration 
+using 2D maps over 3D volume (3D maps support will be implemented in next code
+versions). Nebula is divided onto 80 sectors (20 per quoter, assuming cylinder 
+symethry and physical conditions in each quoter are the same). Each sector divided 
+onto slabs. Shell structure is defined from input emissivity/opacity maps.
+
+General code algorithm is displayed below:
+
+\begin{figure}
+\begin{minipage}[t]{.85\linewidth}
+\centering
+\epsfig{file = diffray_algo.eps,width = .85\linewidth}
+\caption{DiffRay algorithm}\label{diffray_algo}
+\end{minipage}
+\end{figure}
+
+
+For diffuse radiation fluxes integration procedure implementation DiffRay code was developed. The algorithm of code is given on figure \ref{diffray_algo}.\\
+\indent1 - Setting up initial integration steps for angles, reading emissivity and opacity maps, that should be integrated.\\
+\indent2 - Integration of diffuse radiation fluxes for each elementary volume of nebula environment\\
+\indent3 - Comparing if difference between fluxes, obtained on current iteration and previous one. If it fits required precision, exit to 5. Elsewise, decreasing integration step (4), and returning to 2.\\
+\indent5 - Print fluxes in format, that can be readen by PhM code. Exit.\\
+
+\section{How to launch code}
+
+To run code, you need working compiled code version, and valid object data with 
+commands file provided.
+
+\subsection{Code compilation}
+1. Download code archive.\\
+2. Unzip files in any folder you wish. DiffRay3D can be started into any folder, 
+the only demand is code should have enough permissions for create/delete folders 
+and files.\\
+3. Once unzipped, go to "source/v*.*.*/" folder, and run MakeFile.all. This should
+create DiffRay3D.exe executable into instalation root folder.\\
+
+\subsection{Input data format}
+To work correctly, code should have information about objects geometry, emissivity and opacity maps,
+so on. This information is readen from data folder. In general, filename looks like:
+
+Emis\_Lines\_SectorNo{\bf Sector number}\_Age{\bf Object age}Myr.dat
+
+Here Sector number is number of represented by file sector
+Age can be used as any identifier for model data set. (F.E. once you have maps for several models,
+you can enumarate them, and use this numeration in age field.
+
+Complete list of supported data files:
+
+{\bf Continuum1\_Last\_Age10.00Myr.dat} - file with continuum energy mesh structure. 
+Each row should contain into first column continuum cell energy in Rydbergs. 
+File is required.
+
+{\bf Emis\_Cont\_SectorNo1\_Age10.00Myr.dat} - file with continuum emissivity data. Each row 
+corresponds to sector slab. First row has only one value - inner radius. Next rows contain slab outer radius in first column, 
+and emissivity values for each energy cell in following columns. File is required.
+
+{\bf Opac\_Cont\_SectorNo1\_Age10.00Myr.dat} - file with opacity data for each continuum cell. Each row 
+corresponds to sector slab. First row has only one value - inner radius. Next rows contain slab outer radius in first column, 
+and opacity values for each energy cell in following columns. Used both for continuum and lines optical depth calculation. 
+File is required.
+
+{\bf Emis\_Lines\_SectorNo1\_Age10.00Myr.dat} - file with lines emissivity data. Each row 
+corresponds to sector slab. First 2 rows has heading, according to standart Cloudy 
+"punch line emisivity" command, \cite{Cloudy}. Next rows contain slab outer radius in first column, 
+and emissivity values for each emission line in following columns. File is required.
+
+{\bf Abund1\_Age10.00Myr.dat} - file with elemental aundances data. Each row 
+corresponds to sector slab. First row should have valid column headings
+with element names, provided as first 4 symbols of full name. 
+(\#Depth		H	HELI	LITH	BERY..., Garry Ferlands Cloudy output 
+format, see \cite{Cloudy}).
+Next rows contain slab outer radius in first column, 
+and elemental abundances for each element in following columns. File is not required.
+
+\subsection{commands.ini file}
+
+Once you have compiled code and prepared data files, you should write some 
+instructions for how and what code should calculated. These instructions are 
+contained into commands.ini file into instalation root directory. 
+
+An example is distributed with code source. \\
+
+{\bf IO settings}\\
+print directory "path to your output folder, relative to instalation root directory"\\
+input directory "path to input data files folder, relative to instalation root directory"\\
+
+Example:\\
+print directory result/ngc/ism0/140\\
+input directory data/ngc1569nograin\\
+Please, note that paths should be provided without quotes!\\
+
+{\bf Distance}\\
+distance log10\_dist units.\\
+
+Example:\\ 
+distance 19.87 km \\
+(Distance to object is adopted of $10^{19.87}$ kilometers.
+Supported units are meters, kilometers, centimeters.
+
+{\bf Object}\\
+phi x , x - objects azimuthal rotation angle relating to observer sight ray in radians;\\
+theta x , x - objects vertical rotation angle relating to observer sight ray in radians;\\
+age x, x - object age, or another models bundle identifier;\\
+
+Example:\\
+object phi 0.76\\
+object theta 0.21\\
+object age 50\\
+
+{\bf Integration}\\
+maxiterations x, x - maximum code iterations. This option is useful to prevent code
+falling into endless loop when trying to converge.\\
+precision x, x - acceptable convergence between iterations, 0.01 - 1\%.
+mode outw - switches code to Outward Only mode, is good thing for tests.\\
+
+Example:\\
+integration precision 0.005\\
+integration maxiterations 12\\
+
+{\bf Aperture}\\
+
+aperture phi theta w h - Adds aperture to list of apertures to be calculated. 
+Here phi - azimuthal aperture position, theta - vertical position relative to ray
+from observer to center of object. w, h - aperture width and height. All values
+should be provided into radians.\\
+
+Example:\\
+apperture add 0 0 0.000014537 0.000014537\\
+apperture add 0.000464 0.0000139 0.000014537 0.000014537\\
+apperture add -0.000271 -0.0000102 0.000014537 0.000014537\\
+In this example code will run calculations for 3 apertures, and put results to 
+app\{N\} folder. N is aperture number here. Aperture folders are created automatically
+into directory, specified with output command.
+
+
+
+\begin{thebibliography}{3}
+{\small
+\bibitem{DIAGN} Golovaty V.\,V., Dmiterko V.\,I., Mal'kov Yu.\,F., \& Rokach O.\,V. 1993, Astronomical Report, Vol. 37, Issue 4, pp. 346-354
+\bibitem{JPS2016} O. S. Buhajenko, B. Ya. Melekh 2016, `METHOD FOR DETAILED CALCULATION OF THE DIFFUSE IONIZING RADIATION IN NEBULAR ENVIRONMENTS`, Ivan Franko National University of Lviv, 4901 (13 p.) 
+\bibitem{Cloudy} Ferland G.J. 1999, `Hazy, a Brief Introduction to Cloudy 94`, University of Kentucky, Physics Department Internal Report; \texttt{http://www.nublado.org}
+}
+\end{thebibliography}
+\end{document}

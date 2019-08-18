@@ -1,0 +1,8 @@
+echo "started parallel... Angle $1 deg"
+./run_singular_app2 10 20 $1 > report$1_10-20.dat &
+./run_singular_app2 30 40 $1 > report$1_30-40.dat &
+./run_singular_app2 50 60 $1 > report$1_50-60.dat &
+./run_singular_app2 70 80 $1 > report$1_70-80.dat &
+./run_singular_app2 90 100 $1 > report$1_90-100.dat &
+wait
+echo "Ended!\n"

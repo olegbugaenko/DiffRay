@@ -1,0 +1,39 @@
+#!/usr/bin/perl -w
+$iage = 170;
+$maxage = 180;
+mkdir "result/ngc/ism0p0";
+for($iage=170;$iage<=$maxage;$iage += 10)
+{
+    #if($iage == 10 
+#	|| $iage == 70 
+#	|| $iage == 140
+#    )
+    {
+	mkdir "result/ngc/ism0p0/$iage";
+	open(COMMANDS, "> commands.ini")||
+				die "CANNOT OPEN COMMANDS FILE\n";
+
+	print COMMANDS "print directory result/ngc/ism0p0/$iage\n";
+	print COMMANDS "input directory data/ngc1569_nograin\n";
+	print COMMANDS "distance cm 25.01754\n";
+	print COMMANDS "object age $iage\n";
+	print COMMANDS "integration precision 0.005\n";
+	print COMMANDS "integration maxiterations 12\n";
+	print COMMANDS "apperture add 0 0 0.000014537 0.000014537\n";
+	print COMMANDS "apperture add 0.000464 0.0000139 0.000014537 0.000014537\n";
+	print COMMANDS "apperture add -0.000271 -0.0000102 0.000014537 0.000014537\n";
+	print COMMANDS "apperture add 0.0000102 0.0000156 0.000014537 0.000014537\n";
+	print COMMANDS "apperture add 0.0000000 0.000485 0.000014537 0.000014537\n";
+	print COMMANDS "apperture add 0.000644 0.000157 0.000014537 0.000014537\n";
+	print COMMANDS "calc abundances\n";
+	print COMMANDS "calc lines\n";
+	#print COMMANDS "apperture add 0 0 0.000014537 0.000014537\n";
+	#print COMMANDS "apperture add 0.000687 0.000014 0.000014537 0.000014537\n";
+	#print COMMANDS "apperture add -0.000405 -0.000007 0.000014537 0.000014537\n";
+	#print COMMANDS "apperture add 0 0.000007 0.000014537 0.000014537\n";
+	#print COMMANDS "apperture add 0 0.004098 0.000014537 0.000014537\n";
+	#print COMMANDS "apperture add 0.000470 0.00042 0.000014537 0.000014537\n";
+	close (COMMANDS);
+	system "./DiffRay3D.exe";
+    }
+}

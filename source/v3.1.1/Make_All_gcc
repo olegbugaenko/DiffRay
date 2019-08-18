@@ -1,0 +1,4 @@
+rm *.o
+g++ -ansi -c -O3 -ftrapping-math -fno-math-errno -Wall *.cpp -lssl -lcrypto
+g++ -o DiffRay.exe *.o -lm
+cp DiffRay.exe ../../DiffRay.exe

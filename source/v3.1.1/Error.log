@@ -1,0 +1,193 @@
+rm: cannot remove ‘./*.exe’: No such file or directory
+app.cpp: In static member function ‘static bool App::init()’:
+app.cpp:25:10: warning: variable ‘angle’ set but not used [-Wunused-but-set-variable]
+  vector3 angle = vector3(0, M_PI + App::phi, App::theta);
+          ^
+app.cpp:41:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from continuum.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^
+continuum.cpp: In static member function ‘static int CContinuum::initSectorials(int)’:
+continuum.cpp:28:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::setMeshSize(int)’:
+continuum.cpp:79:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::getRadii(int)’:
+continuum.cpp:130:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geom3D.cpp: In function ‘THalfplane create(TPlane, vector3, int)’:
+geom3D.cpp:220:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geom3D.cpp: In function ‘THalfplane createFromAngles(double, double, double)’:
+geom3D.cpp:230:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geom3D.cpp: In function ‘vector3 intersectHalfplane(TRay, THalfplane)’:
+geom3D.cpp:235:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geom3D.cpp: In function ‘vector3 intersectRayWithPhi(TRay, double)’:
+geom3D.cpp:248:10: warning: variable ‘axis’ set but not used [-Wunused-but-set-variable]
+  vector3 axis = makeOrt(0.0, M_PI/2.0);
+          ^
+In file included from geometry.cpp:1:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^
+geometry.cpp: In static member function ‘static int CGeometry::readSectors(char*)’:
+geometry.cpp:18:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geometry.cpp: In static member function ‘static int CGeometry::readRadiuses(char*, int)’:
+geometry.cpp:25:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    CGeometry::readSectors();
+                           ^
+geometry.cpp: In static member function ‘static int CGeometry::getRadii(int)’:
+geometry.cpp:51:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geometry.cpp: In static member function ‘static int CGeometry::readRadiuses(char*, int)’:
+geometry.cpp:45:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from integration.cpp:3:0:
+solver.h:1:13: warning: extra tokens at end of #pragma directive [enabled by default]
+ #pragma once;
+             ^
+In file included from integration.cpp:5:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^
+integration.cpp: In static member function ‘static int CIntegration::InitIntegration(int, int)’:
+integration.cpp:42:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+integration.cpp: In static member function ‘static int CIntegration::doCalc()’:
+integration.cpp:51:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from lines.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^
+lines.cpp: In static member function ‘static int CLine::initSectorials(int)’:
+lines.cpp:19:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+lines.cpp: In static member function ‘static int CLine::putLine(int)’:
+lines.cpp:65:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+lines.cpp: In static member function ‘static int CLine::getRadii(int)’:
+lines.cpp:70:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+main.cpp:5:17: warning: extra tokens at end of #include directive [enabled by default]
+ #include "app.h";
+                 ^
+main.cpp:6:23: warning: extra tokens at end of #include directive [enabled by default]
+ #include "continuum.h";
+                       ^
+main.cpp:7:20: warning: extra tokens at end of #include directive [enabled by default]
+ #include "geom3d.h";
+                    ^
+main.cpp:8:20: warning: extra tokens at end of #include directive [enabled by default]
+ #include "solver.h";
+                    ^
+In file included from main.cpp:8:0:
+solver.h:1:13: warning: extra tokens at end of #pragma directive [enabled by default]
+ #pragma once;
+             ^
+In file included from main.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^
+main.cpp: In function ‘int main()’:
+main.cpp:77:11: warning: unused variable ‘resarr’ [-Wunused-variable]
+  double **resarr;
+           ^
+main.cpp:23:40: warning: ‘myarr’ is used uninitialized in this function [-Wuninitialized]
+  myarr = CBasics::int2Arr(myarr,8,10,1);
+                                        ^
+reader.cpp: In static member function ‘static double** CReader::read_file_array(FILE*, int, int, int, int (*)(int), int (*)(int), int (*)(int, int, double))’:
+reader.cpp:142:46: warning: too many arguments for format [-Wformat-extra-args]
+   while ( sscanf(ptr, "%s[\t\n]", strdata, &n) == 1 && !iSkip)
+                                              ^
+reader.cpp:109:9: warning: unused variable ‘val’ [-Wunused-variable]
+  double val;
+         ^
+reader.cpp: In static member function ‘static int CReader::callable(int)’:
+reader.cpp:172:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+reader.cpp: In static member function ‘static char** CReader::read_commands(FILE*)’:
+reader.cpp:28:23: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+   fgets(string,500,MF);
+                       ^
+reader.cpp:31:24: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+    fgets(string,500,MF);
+                        ^
+reader.cpp: In static member function ‘static double** CReader::read_file_array(FILE*, int, int, int, int (*)(int), int (*)(int), int (*)(int, int, double))’:
+reader.cpp:114:25: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+   fgets(line,maxsize,MF);
+                         ^
+reader.cpp:122:25: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+   fgets(line,maxsize,MF);
+                         ^
+reader.cpp:166:9: warning: ‘result’ is used uninitialized in this function [-Wuninitialized]
+  return result;
+         ^
+In file included from rt.cpp:3:0:
+solver.h:1:13: warning: extra tokens at end of #pragma directive [enabled by default]
+ #pragma once;
+             ^
+In file included from rt.cpp:5:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^
+rt.cpp: In static member function ‘static int CRT::calc_ray(int)’:
+rt.cpp:30:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+rt.cpp: In static member function ‘static int CRT::calc_cont(int)’:
+rt.cpp:58:37: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 2 has type ‘int’ [-Wformat=]
+   printf("%ld; %ld\n", ilayer,sector);
+                                     ^
+rt.cpp:58:37: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 3 has type ‘int’ [-Wformat=]
+rt.cpp:117:8: warning: unused variable ‘icell’ [-Wunused-variable]
+    int icell = CRT::get_mesh_ind(en);
+        ^
+In file included from solver.cpp:3:0:
+solver.h:1:13: warning: extra tokens at end of #pragma directive [enabled by default]
+ #pragma once;
+             ^
+In file included from solver.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^
+solver.cpp: In static member function ‘static int CSolver::getPoints()’:
+solver.cpp:208:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from solver.cpp:3:0:
+solver.h:5:8: warning: ‘curpoint.intersection::is’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ struct intersection
+        ^
+solver.cpp:119:17: note: ‘curpoint.intersection::is’ was declared here
+    intersection curpoint;
+                 ^
+In file included from solver.cpp:3:0:
+solver.h:5:8: warning: ‘curpoint.intersection::phi’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ struct intersection
+        ^
+solver.cpp:119:17: note: ‘curpoint.intersection::phi’ was declared here
+    intersection curpoint;
+                 ^

@@ -1,0 +1,4 @@
+echo "started angle 25"
+./run_parallel_first 25
+./run_parallel_second 25
+echo "Ended!\n"
