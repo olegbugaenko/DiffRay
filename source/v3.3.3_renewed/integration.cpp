@@ -61,13 +61,16 @@ int CIntegration::statisticRay()
 	App::rayIntegration.angle.y += App::AppDPhi;
 	App::rayIntegration.angle.z += App::AppDTheta;
 
-	for(int i=0;i<Abund::nElements;i++)
+	if(App::CalcAbund)
 	{
-		Abund::abmass[i] = 0.;
-		Abund::abemso[i] = 0.;
+		for(int i=0;i<Abund::nElements;i++)
+		{
+			Abund::abmass[i] = 0.;
+			Abund::abemso[i] = 0.;
+		}
+		Abund::mass = 0.;
+		Abund::emso = 0.;
 	}
-	Abund::mass = 0.;
-	Abund::emso = 0.;
 
 	CRT::calc_ray(1);
 	App::isStatMode = false;
@@ -78,10 +81,14 @@ int CIntegration::InitIntegration(int mode,int nPrecision)
 	CDebugger::debug("Init Integration: %d,%d\n",mode,nPrecision);
 	CIntegration::mode = mode;
 
-	for(int i = 0; i < CContinuum::nbands; i++)
+	if(App::CalcIRBands)
 	{
-		CContinuum::bands[i].totalLum = 0.;
+		for(int i = 0; i < CContinuum::nbands; i++)
+		{
+			CContinuum::bands[i].totalLum = 0.;
+		}
 	}
+	
 
 	for(int ic=0;ic<CContinuum::cellCount; ic++)
 	{
@@ -128,7 +135,7 @@ int CIntegration::InitIntegration(int mode,int nPrecision)
 
 int CIntegration::doCalc()
 {
-	printf("do Calc: %d\n", CIntegration::mode);
+	CDebugger::debug("do Calc: %d", CIntegration::mode);
 	
 	App::rayIntegration = App::rayToObj;
 	double lumfactor = 1.0;

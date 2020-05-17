@@ -12,6 +12,7 @@
 #include "output/output_handler.h"
 #include <sys/stat.h>
 #include "output/debugger.h"
+#include "spectra/isophote.h"
 
 int CDiffRay::nPoints = 0;
 double CDiffRay::pointsArr[1000];
@@ -50,8 +51,8 @@ int CDiffRay::initializePoints()
 	CDebugger::log("Started reading points");
 	while(!feof(FPNTS)) 
 	{
-		char chline[1000];
-		fgets(chline, 1000, FPNTS);
+		char chline[100000];
+		fgets(chline, 100000, FPNTS);
 		if(i < App::nSkipPoints) 
 		{
 			i++;
@@ -81,6 +82,7 @@ int CDiffRay::launch()
 	{
 		App::distance = CDiffRay::pointsArr[i];
 		App::init();
+		CIsophotes::resetApp();
 		//if(i > 4 && i <= 649)
 		{
 			CDiffRay::runDiffRay(true, i);
@@ -91,11 +93,13 @@ int CDiffRay::launch()
 int CDiffRay::runDiffRay(bool usePoints, int nPoint)
 {
 	int mode = App::integration_mode;
+	printf("R6: %le\n", CGeometry::inRadius[0]);
 	CIteration::initIteration(mode);
 
 	App::isStatMode = false;
 
-
+	printf("R7: %le\n", CGeometry::inRadius[0]);
+	
 	// while(/*CIteration::nIteration <= App::maxiterations*/)
 	{
 		Abund::refreshStatistics();
@@ -109,6 +113,7 @@ int CDiffRay::runDiffRay(bool usePoints, int nPoint)
 		
 		CDebugger::debug("Refreshed statistics");
 		
+		printf("R8: %le\n", CGeometry::inRadius[0]);
 		CIteration::doIteration();
 
 		CDebugger::debug("Printing output");
@@ -118,7 +123,7 @@ int CDiffRay::runDiffRay(bool usePoints, int nPoint)
 		{
 			CIntegration::lumfactor *= (1/(4*M_PI));
 		}
-
+		
 		if(usePoints) 
 		{
 			CDebugger::debug("nPoint: %d\n", nPoint);
