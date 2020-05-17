@@ -69,7 +69,7 @@ int CIteration::doIteration()
 		}
 	}
 
-	CIntegration::InitIntegration(CIteration::mode,10+4*nIteration);
+	CIntegration::InitIntegration(CIteration::mode,20+4*nIteration);
 	CIntegration::doCalc();
 
 	for(int i=0;i<CLine::linesCount;i++)

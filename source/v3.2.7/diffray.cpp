@@ -8,6 +8,8 @@
 #include "geometry.h"
 #include "abund.h"
 #include "grain_temp.h"
+#include "physics.h"
+#include <sys/stat.h>
 
 int compareRadii (const void * pa, const void * pb)
 {
@@ -38,7 +40,8 @@ int CDiffRay::runDiffRay()
 		Abund::refreshStatistics();
 		CLine::refreshStatistics();
 		GrainTemp::refreshStatistics();
-		
+		Physics::refreshStatistics();
+		CContinuum::refreshStatistics();
 		CIteration::doIteration();
 
 		
@@ -258,6 +261,7 @@ int CDiffRay::runDiffRay()
 		{
 
 			char fname[255];
+			
 			sprintf(fname,"%s/bands.txt",App::output_dir);
 			FILE *FP;
 			
@@ -280,6 +284,17 @@ int CDiffRay::runDiffRay()
 				int iT = cBand.nAnus-1;
 				double trans = 1.0;
 
+				char bandsFNm[255];
+				char bandsDir[255];
+				FILE *bandFile;
+				if(App::printBands) 
+				{
+					sprintf(bandsDir, "%s/bands", App::output_dir);
+					sprintf(bandsFNm, "%s/bands/%s.dat", App::output_dir, cBand.label);
+					mkdir(bandsDir, S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+					bandFile = fopen(bandsFNm, "w+");
+				}
+
 				for(int iCl = cBand.iNuLeft; iCl < cBand.iNuRight; iCl++)
 				{
 					double cEn = CContinuum::anu[iCl];
@@ -291,15 +306,22 @@ int CDiffRay::runDiffRay()
 					}
 					
 					//printf("Trans[%d]: %le; %le > %le\n", iT, trans, cEn, 912.0/cBand.ennu[iT]);
-					bandInten += trans*((CIntegration::flux_continua[iCl] + CIntegration::flux_transitions[iCl])*App::cov_fac + CIntegration::flux_intrinsic[iCl])*2.179874099E-11*CContinuum::anu[iCl];
-					Yan += trans*((CIntegration::flux_continua[iCl] + CIntegration::flux_transitions[iCl])*App::cov_fac + CIntegration::flux_intrinsic[iCl])*2.179874099E-11/(1.e-23*3.e+8/(912*1.e-10));
+					double x = trans*((CIntegration::flux_continua[iCl] + CIntegration::flux_transitions[iCl])*App::cov_fac + CIntegration::flux_intrinsic[iCl])*2.179874099E-11/(1.e-23*3.e+8/(912*1.e-10));
+					double y = trans*((CIntegration::flux_continua[iCl] + CIntegration::flux_transitions[iCl])*App::cov_fac + CIntegration::flux_intrinsic[iCl])*2.179874099E-11*CContinuum::anu[iCl];
 					
+					bandInten += y;
+					Yan += x;
+					if(App::printBands && bandFile) {
+						fprintf(bandFile, "%le\t%le\t%le\n", 912.0*1.e-4/cEn, x, y);
+					}
 				}
 
 
 				bandInten *= CIntegration::lumfactor;
 				Yan *= CIntegration::lumfactor;
-
+				if(bandFile) {
+					fclose(bandFile);
+				}
 				fprintf(FP, "%s\t\t%le\t\t%le\t\t%lf\t\t%lf\n", cBand.label, bandInten, Yan, log10(1.e-50 + 4*M_PI*bandInten*pow(App::distance,2.0)),bandInten/(CIntegration::flux_lines[0]*CIntegration::lumfactor));
 			}
 
@@ -326,19 +348,23 @@ int CDiffRay::runDiffRay()
 	printf("SORTEDL\n");
 	qsort (GrainTemp::statistics, 500000, sizeof GrainTemp::statistics[0], compareRadii);
 	printf("SORTEDL\n");
+	qsort (Physics::statistics, 500000, sizeof Physics::statistics[0], compareRadii);
+	printf("SORTEDP\n");
+	qsort (CContinuum::statistics, 500000, sizeof CContinuum::statistics[0], compareRadii);
+	printf("SORTEDB\n");
 	int i = 0;
 
 	FILE *AS;
 
 	char fnamedas[255];
-	sprintf(fnamedas,"%s/gt_distribution_saved.txt",App::output_dir);
+	sprintf(fnamedas,"%s/cont_distribution_saved.txt",App::output_dir);
 
 	AS = fopen(fnamedas, "w+");
 
 	for(int i=0;i<500000;i++) 
 	{
-		if(GrainTemp::statistics[i][0] > 1.e-36) {
-			fprintf(AS, "%le\t%le\n", GrainTemp::statistics[i][0], GrainTemp::statistics[i][1]);
+		if(CContinuum::statistics[i][0] > 1.e-36) {
+			fprintf(AS, "%le\t%le\t%le\n", CContinuum::statistics[i][0], CContinuum::statistics[i][18], CContinuum::statistics[i][22]);
 		}		
 	}
 
@@ -388,9 +414,38 @@ int CDiffRay::runDiffRay()
 		}
 	}
 
+	for(int ir=0; ir<1; ir++)
+	{
+		for(int is=1;is<CLine::iStat-1; is++)
+		{
+			if(Physics::statistics[is][1] < (Physics::statistics[is-1][1] + Physics::statistics[is+1][1])/3)
+			{
+				for(int k=1;k<=3;k++)
+				{
+					Physics::statistics[is][k] = (Physics::statistics[is-1][k] + Physics::statistics[is][k] + Physics::statistics[is+1][k])/3;
+				}
+			}
+		}
+	}
+
+	for(int ir=0; ir<1; ir++)
+	{
+		for(int is=1;is<CLine::iStat-1; is++)
+		{
+			if(CContinuum::statistics[is][1] < (CContinuum::statistics[is-1][1] + CContinuum::statistics[is+1][1])/3)
+			{
+				for(int k=1;k<=CContinuum::nbands;k++)
+				{
+					CContinuum::statistics[is][k] = (CContinuum::statistics[is-1][k] + CContinuum::statistics[is][k] + CContinuum::statistics[is+1][k])/3;
+				}
+			}
+		}
+	}
+
 	int nLines = CLine::iStat;
 	int nAbunds = CLine::iStat; 
 	int nTemps = CLine::iStat; 
+	int nPhys = CLine::iStat;
 
 	int ik = 0;
 	int ic = 0;
@@ -658,5 +713,199 @@ int CDiffRay::runDiffRay()
 		i++;
 	}
 	fclose(GrainTempF);
+
+
+
+	ik = 0;
+	ic = 0;
+	ikprev = 0;
+	
+	for(int k=0;k<100;k++)
+	{
+		av[k] = 0.;
+	}
+
+	while(ic < CLine::iStat)
+	{
+		double dR = 0.01;
+
+		for(int k=0;k<100;k++)
+		{
+			av[k] = 1.e-42;
+		}
+		int nElems = 0;
+
+		while(dR < 1.e+19 && ik<CLine::iStat)
+		{
+			ik++;
+			dR = fabs(CContinuum::statistics[ik][0] - CContinuum::statistics[ikprev][0]);
+			
+			for(int k=1;k<CContinuum::nbands+1;k++)
+			{
+				av[k] += CContinuum::statistics[ik][k];
+			}
+			nElems++;
+			
+		}
+
+		ikprev = ik;
+
+		//printf("av: %le; n=%d; LC=%d\n",av[1], nElems, CLine::iStat);
+
+		for(int k=1;k<CContinuum::nbands+1;k++)
+		{
+			CContinuum::statistics[ic][k] = av[k]/nElems;
+		}
+
+		
+		
+
+		if(ik >= CLine::iStat)
+		{
+			CContinuum::statistics[ic][0] = CContinuum::statistics[CLine::iStat-1][0];
+			nTemps = ic+1;
+			break;
+		}
+		else
+		{
+			CContinuum::statistics[ic][0] = CContinuum::statistics[ik][0];
+
+		}
+
+		ic++;
+
+	}
+	
+	printf("IREmits selected: %d\n",nTemps);
+
+
+	i = 0;
+
+	char fnameemit[255];
+	sprintf(fnameemit,"%s/bandsemis_distribution.txt",App::output_dir);
+	
+	FILE *BandsEmisF;
+	printf("TC: %d\n",CLine::iStat);
+	BandsEmisF = fopen(fnameemit, "w+");
+	while(i<nTemps && i<500000)
+	{
+		if(CContinuum::statistics[i][0] > 1.e-35 && CContinuum::statistics[i][0] < 1.e+25)
+		{
+			int j = 0;
+			while(j <= CContinuum::nbands+1 && j < 100)
+			{
+				fprintf(BandsEmisF, "%le\t", CContinuum::statistics[i][j]);
+				j++;
+			}
+			fprintf(BandsEmisF, "\n");
+		}
+		
+		i++;
+	}
+	fclose(BandsEmisF);
+
+
+
+	ik = 0;
+	ic = 0;
+	ikprev = 0;
+	
+	for(int k=0;k<100;k++)
+	{
+		av[k] = 0.;
+	}
+
+	while(ic < CLine::iStat)
+	{
+		double dR = 0.01;
+
+		for(int k=0;k<100;k++)
+		{
+			av[k] = 1.e-42;
+		}
+		int nElems = 0;
+		int maxSector = Physics::statistics[ikprev][3];
+		int maxLayer = Physics::statistics[ikprev][4];
+		double maxNe = Physics::statistics[ikprev][2];
+
+		while(dR < 1.e+19 && ik<CLine::iStat)
+		{
+			ik++;
+			dR = fabs(Physics::statistics[ik][0] - Physics::statistics[ikprev][0]);
+			if(Physics::statistics[ik][2] > maxNe) {
+				maxNe = Physics::statistics[ik][2];
+				maxSector = Physics::statistics[ik][3];
+				maxLayer = Physics::statistics[ik][4];
+				
+			}
+			for(int k=1;k<3;k++)
+			{
+				av[k] += Physics::statistics[ik][k];
+			}
+			av[3] = maxSector;
+			av[4] = maxLayer;
+			av[5] = maxNe;
+			nElems++;
+			
+		}
+
+		ikprev = ik;
+
+		//printf("av: %le; n=%d; LC=%d\n",av[1], nElems, CLine::iStat);
+
+		for(int k=1;k<3;k++)
+		{
+			Physics::statistics[ic][k] = av[k]/nElems;
+		}
+
+		for(int k=3;k<6;k++)
+		{
+			Physics::statistics[ic][k] = av[k];
+		}		
+		
+
+		if(ik >= CLine::iStat)
+		{
+			Physics::statistics[ic][0] = Physics::statistics[CLine::iStat-1][0];
+			nPhys = ic+1;
+			break;
+		}
+		else
+		{
+			Physics::statistics[ic][0] = Physics::statistics[ik][0];
+
+		}
+
+		ic++;
+
+	}
+	
+	printf("Physics selected: %d\n",nPhys);
+
+
+	i = 0;
+
+	char fnamephys[255];
+	sprintf(fnamephys,"%s/phys_distribution.txt",App::output_dir);
+	
+	FILE *OverviewF;
+	printf("TC: %d\n",CLine::iStat);
+	OverviewF = fopen(fnamephys, "w+");
+	while(i<nPhys && i<500000)
+	{
+		if(Physics::statistics[i][0] > 1.e-35 && Physics::statistics[i][0] < 1.e+25)
+		{
+			int j = 0;
+			while(j <= 6)
+			{
+				fprintf(OverviewF, "%le\t", Physics::statistics[i][j]);
+				j++;
+			}
+			fprintf(OverviewF, "\n");
+		}
+		
+		i++;
+	}
+	fclose(OverviewF);
 
 }

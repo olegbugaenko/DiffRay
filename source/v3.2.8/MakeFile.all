@@ -1,0 +1,6 @@
+rm ./*.exe ./*.o
+g++ -ansi -c -O3 -Wall *.cpp
+g++ -o  DiffRay3D.exe *.o -lm
+cp DiffRay3D.exe ../../DiffRay3D.exe
+cp DiffRay3D.exe ../../work/DiffRay3D.exe
+

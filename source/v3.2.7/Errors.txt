@@ -37,40 +37,43 @@ app.cpp:11:26: warning: deprecated conversion from string constant to ‘char*�
  char *App::data_suffix = "Age60.00Myr.dat";
                           ^
 app.cpp: In static member function ‘static bool App::addApperture(double, double, double, double)’:
-app.cpp:63:1: warning: no return statement in function returning non-void [-Wreturn-type]
+app.cpp:68:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 app.cpp: In static member function ‘static bool App::init()’:
-app.cpp:70:10: warning: variable ‘angle’ set but not used [-Wunused-but-set-variable]
+app.cpp:75:10: warning: variable ‘angle’ set but not used [-Wunused-but-set-variable]
   vector3 angle = vector3(0, M_PI + App::phi, App::theta);
           ^
-app.cpp:78:1: warning: no return statement in function returning non-void [-Wreturn-type]
+app.cpp:83:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 app.cpp: In static member function ‘static bool App::initAperture(int)’:
-app.cpp:105:1: warning: no return statement in function returning non-void [-Wreturn-type]
+app.cpp:110:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 app.cpp: In static member function ‘static bool App::setRay(double, double)’:
-app.cpp:111:10: warning: variable ‘angle’ set but not used [-Wunused-but-set-variable]
+app.cpp:116:10: warning: variable ‘angle’ set but not used [-Wunused-but-set-variable]
   vector3 angle = vector3(0, M_PI + phi, theta);
           ^
-app.cpp:123:1: warning: no return statement in function returning non-void [-Wreturn-type]
+app.cpp:128:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 app.cpp: In static member function ‘static bool App::readCommands()’:
-app.cpp:209:45: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+app.cpp:214:45: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
      sscanf(commands[2],"%s",&App::output_dir);
                                              ^
-app.cpp:210:48: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+app.cpp:215:48: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
      sscanf(commands[2],"%s",&App::output_dir_in);
                                                 ^
-app.cpp:219:44: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+app.cpp:229:44: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
      sscanf(commands[2],"%s",&App::input_dir);
                                             ^
-app.cpp:224:44: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+app.cpp:234:44: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
      sscanf(commands[2],"%s",&App::data_base);
                                             ^
+app.cpp:239:45: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::data_bands);
+                                             ^
 In file included from app.h:3:0,
                  from continuum.h:5,
                  from continuum.cpp:3:
@@ -98,31 +101,35 @@ geometry.h: At global scope:
 geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
   static int readSectors(char fpattern[500] = "");
                                               ^
+continuum.cpp: In static member function ‘static int CContinuum::refreshStatistics()’:
+continuum.cpp:31:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
 continuum.cpp: In static member function ‘static int CContinuum::initSectorials(int)’:
-continuum.cpp:30:1: warning: no return statement in function returning non-void [-Wreturn-type]
+continuum.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 continuum.cpp: In static member function ‘static int CContinuum::setMeshSize(int)’:
-continuum.cpp:85:1: warning: no return statement in function returning non-void [-Wreturn-type]
+continuum.cpp:107:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 continuum.cpp: In static member function ‘static int CContinuum::getRadii(int)’:
-continuum.cpp:136:1: warning: no return statement in function returning non-void [-Wreturn-type]
+continuum.cpp:158:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 continuum.cpp: In static member function ‘static int CContinuum::readBands()’:
-continuum.cpp:244:26: warning: unknown escape sequence: '\.' [enabled by default]
+continuum.cpp:266:26: warning: unknown escape sequence: '\.' [enabled by default]
        sscanf(ent->d_name," %[^\t\n\.]",fnamebase);
                           ^
-continuum.cpp:245:61: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+continuum.cpp:267:61: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
        printf ("FILE - %s %d\n", fnamebase, strlen(fnamebase));
                                                              ^
 continuum.cpp: In static member function ‘static int CContinuum::assignBands()’:
-continuum.cpp:302:1: warning: no return statement in function returning non-void [-Wreturn-type]
+continuum.cpp:320:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 continuum.cpp: In static member function ‘static int CContinuum::readBands()’:
-continuum.cpp:260:1: warning: control reaches end of non-void function [-Wreturn-type]
+continuum.cpp:282:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
 In file included from continuum.cpp:3:0:
@@ -137,15 +144,26 @@ continuum.h:102:40: warning: ignoring return value of ‘int fscanf(FILE*, const
       fscanf(FLb, " %lf %lf ", &nu, &tr);
                                         ^
 continuum.cpp: In static member function ‘static int CContinuum::readInwardFluxes(char*)’:
-continuum.cpp:321:21: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+continuum.cpp:339:21: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
   fgets(chLab,500,FP);
                      ^
-continuum.cpp:329:34: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+continuum.cpp:347:34: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
    fscanf(FP,"%le%le", &anu, &flx);
                                   ^
-continuum.cpp:346:1: warning: control reaches end of non-void function [-Wreturn-type]
+continuum.cpp:364:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
+continuum.cpp: In static member function ‘static int CContinuum::refreshStatistics()’:
+continuum.cpp:28:38: warning: iteration 41u invokes undefined behavior [-Waggressive-loop-optimizations]
+    CContinuum::statistics[i][j] = 0.0;
+                                      ^
+continuum.cpp:26:3: note: containing loop
+   for(int j=0; j<100; j++)
+   ^
+continuum.cpp: In static member function ‘static double CContinuum::getBandEmissivity(int, int, int)’:
+continuum.cpp:40:9: warning: ‘result’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  return result;
+         ^
 In file included from integration.h:3:0,
                  from diffray.cpp:2:
 solver.h:1:13: warning: extra tokens at end of #pragma directive [enabled by default]
@@ -179,9 +197,12 @@ continuum.h:129:3: warning: no return statement in function returning non-void [
    }
    ^
 diffray.cpp: In static member function ‘static int CDiffRay::runDiffRay()’:
-diffray.cpp:524:1: warning: no return statement in function returning non-void [-Wreturn-type]
+diffray.cpp:909:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
+diffray.cpp:323:22: warning: ‘bandFile’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      fclose(bandFile);
+                      ^
 In file included from geom3D.cpp:2:0:
 geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
 geom3d.h:156:5: warning: no return statement in function returning non-void [-Wreturn-type]
@@ -227,6 +248,26 @@ geometry.cpp:52:1: warning: no return statement in function returning non-void [
  ^
 geometry.cpp: In static member function ‘static int CGeometry::readRadiuses(char*, int)’:
 geometry.cpp:46:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from grain_temp.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^
+grain_temp.cpp: In static member function ‘static int GrainTemp::refreshStatistics()’:
+grain_temp.cpp:24:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+grain_temp.cpp: In static member function ‘static int GrainTemp::initSectorials(int)’:
+grain_temp.cpp:32:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+grain_temp.cpp: In static member function ‘static int GrainTemp::putTemps(int)’:
+grain_temp.cpp:80:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+grain_temp.cpp: In static member function ‘static int GrainTemp::getRadii(int)’:
+grain_temp.cpp:85:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 In file included from integration.cpp:3:0:
@@ -349,28 +390,16 @@ lines.cpp:120:6: warning: unused variable ‘idSorted’ [-Wunused-variable]
   int idSorted[100];
       ^
 lines.cpp: In static member function ‘static int CLine::readDatabase()’:
-lines.cpp:194:38: warning: format ‘%s’ expects a matching ‘char*’ argument [-Wformat=]
-  sprintf(databPath, "%s/line_ch.data");
-                                      ^
-lines.cpp:199:54: warning: format ‘%s’ expects a matching ‘char*’ argument [-Wformat=]
-   printf("Warning!!!!\nDatabase file not found: %s\n")
-                                                      ^
-lines.cpp:200:3: error: expected ‘;’ before ‘LDB’
-   LDB = fopen("data/database/line_ch.data","r");
-   ^
-lines.cpp:211:39: warning: format ‘%s’ expects a matching ‘char*’ argument [-Wformat=]
-  sprintf(databPath2, "%s/line_en.data"); 
-                                       ^
-lines.cpp:226:6: warning: unused variable ‘nC2’ [-Wunused-variable]
+lines.cpp:228:6: warning: unused variable ‘nC2’ [-Wunused-variable]
   int nC2    = CReader::calc_lines_number(LDB2,15);
       ^
-lines.cpp:242:21: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
+lines.cpp:244:21: warning: ignoring return value of ‘char* fgets(char*, int, FILE*)’, declared with attribute warn_unused_result [-Wunused-result]
    fgets(line,20,LDB);
                      ^
-lines.cpp:248:26: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
+lines.cpp:250:26: warning: ignoring return value of ‘int fscanf(FILE*, const char*, ...)’, declared with attribute warn_unused_result [-Wunused-result]
     fscanf(LDB2,"%le",&el); 
                           ^
-lines.cpp:299:1: warning: control reaches end of non-void function [-Wreturn-type]
+lines.cpp:301:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
 main.cpp:5:17: warning: extra tokens at end of #include directive [enabled by default]
@@ -392,6 +421,12 @@ solver.h:1:13: warning: extra tokens at end of #pragma directive [enabled by def
 main.cpp:9:21: warning: extra tokens at end of #include directive [enabled by default]
  #include "diffray.h";
                      ^
+main.cpp:10:19: warning: extra tokens at end of #include directive [enabled by default]
+ #include "abund.h";
+                   ^
+main.cpp:11:24: warning: extra tokens at end of #include directive [enabled by default]
+ #include "grain_temp.h";
+                        ^
 In file included from main.cpp:4:0:
 geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
   static int readSectors(char fpattern[500] = "");
@@ -417,10 +452,33 @@ continuum.h:95:10: warning: unused variable ‘line’ [-Wunused-variable]
 continuum.h:129:3: warning: no return statement in function returning non-void [-Wreturn-type]
    }
    ^
-main.cpp: In function ‘int main()’:
-main.cpp:44:11: warning: unused variable ‘resarr’ [-Wunused-variable]
+main.cpp: In function ‘int main(int, char**)’:
+main.cpp:18:38: warning: format not a string literal and no format arguments [-Wformat-security]
+   sprintf(App::commands_path, argv[1]);
+                                      ^
+main.cpp:55:11: warning: unused variable ‘resarr’ [-Wunused-variable]
   double **resarr;
            ^
+In file included from physics.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^
+physics.cpp: In static member function ‘static int Physics::refreshStatistics()’:
+physics.cpp:25:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+physics.cpp: In static member function ‘static int Physics::initSectorials(int)’:
+physics.cpp:33:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+physics.cpp: In static member function ‘static int Physics::putPhysics(int)’:
+physics.cpp:76:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+physics.cpp: In static member function ‘static int Physics::getRadii(int)’:
+physics.cpp:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
 reader.cpp: In static member function ‘static int CReader::read_file_array(FILE*, int, int, int, int (*)(int), int (*)(int), int (*)(int, int, double), int (*)(int, char*))’:
 reader.cpp:157:46: warning: too many arguments for format [-Wformat-extra-args]
    while ( sscanf(ptr, "%s[\t\n]", strdata, &n) == 1 && !iSkip)
@@ -475,13 +533,16 @@ continuum.h:129:3: warning: no return statement in function returning non-void [
    }
    ^
 rt.cpp: In static member function ‘static int CRT::calc_ray(int)’:
-rt.cpp:35:1: warning: no return statement in function returning non-void [-Wreturn-type]
+rt.cpp:37:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 rt.cpp: In static member function ‘static int CRT::calc_cont(int)’:
-rt.cpp:160:11: warning: variable ‘emct’ set but not used [-Wunused-but-set-variable]
+rt.cpp:164:11: warning: variable ‘emct’ set but not used [-Wunused-but-set-variable]
     double emct = 0.0;
            ^
+rt.cpp:414:12: warning: unused variable ‘Z’ [-Wunused-variable]
+     double Z = 0.;
+            ^
 In file included from solver.cpp:3:0:
 solver.h:1:13: warning: extra tokens at end of #pragma directive [enabled by default]
  #pragma once;
@@ -532,94 +593,3 @@ solver.h:5:8: warning: ‘curpoint.intersection::phi’ may be used uninitialize
 solver.cpp:147:17: note: ‘curpoint.intersection::phi’ was declared here
     intersection curpoint;
                  ^
-main.o: In function `main':
-main.cpp:(.text.startup+0x124): undefined reference to `CLine::readen'
-main.cpp:(.text.startup+0x143): undefined reference to `CLine::readDatabase()'
-main.cpp:(.text.startup+0x56b): undefined reference to `CLine::readLines(char*, int)'
-diffray.o: In function `CDiffRay::runDiffRay()':
-diffray.cpp:(.text+0xbe): undefined reference to `CLine::refreshStatistics()'
-diffray.cpp:(.text+0x50c): undefined reference to `CLine::linesCount'
-diffray.cpp:(.text+0x598): undefined reference to `CLine::lineIds'
-diffray.cpp:(.text+0x5ce): undefined reference to `CLine::linesCapDB'
-diffray.cpp:(.text+0x5e5): undefined reference to `CLine::linesCount'
-diffray.cpp:(.text+0x685): undefined reference to `CLine::linesCount'
-diffray.cpp:(.text+0x6ca): undefined reference to `CLine::cumulative'
-diffray.cpp:(.text+0x6d3): undefined reference to `CLine::cumulative'
-diffray.cpp:(.text+0x70e): undefined reference to `CLine::lineIds'
-diffray.cpp:(.text+0x71b): undefined reference to `CLine::cumulative'
-diffray.cpp:(.text+0x748): undefined reference to `CLine::linesCapDB'
-diffray.cpp:(.text+0x75f): undefined reference to `CLine::linesCount'
-diffray.cpp:(.text+0x7ff): undefined reference to `CLine::linesCount'
-diffray.cpp:(.text+0x814): undefined reference to `CLine::lineIds'
-diffray.cpp:(.text+0x836): undefined reference to `CLine::linesCapDB'
-diffray.cpp:(.text+0x84d): undefined reference to `CLine::linesCount'
-diffray.cpp:(.text+0x875): undefined reference to `CLine::linesCount'
-diffray.cpp:(.text+0x88d): undefined reference to `CLine::cumulative'
-diffray.cpp:(.text+0x8b7): undefined reference to `CLine::linesCount'
-diffray.cpp:(.text+0xd8c): undefined reference to `CLine::iStat'
-diffray.cpp:(.text+0xdfc): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0xeb7): undefined reference to `CLine::iStat'
-diffray.cpp:(.text+0x1085): undefined reference to `CLine::linesCount'
-diffray.cpp:(.text+0x109f): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0x10ac): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0x10b4): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0x10ba): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0x10fe): undefined reference to `CLine::statistics'
-diffray.o:diffray.cpp:(.text+0x1105): more undefined references to `CLine::statistics' follow
-diffray.o: In function `CDiffRay::runDiffRay()':
-diffray.cpp:(.text+0x1535): undefined reference to `CLine::iStat'
-diffray.cpp:(.text+0x1557): undefined reference to `CLine::linesCount'
-diffray.cpp:(.text+0x15e9): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0x1608): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0x162e): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0x167e): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0x16b2): undefined reference to `CLine::statistics'
-diffray.o:diffray.cpp:(.text+0x16ba): more undefined references to `CLine::statistics' follow
-diffray.o: In function `CDiffRay::runDiffRay()':
-diffray.cpp:(.text+0x1704): undefined reference to `CLine::iStat'
-diffray.cpp:(.text+0x1795): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0x17ac): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0x17e7): undefined reference to `CLine::iStat'
-diffray.cpp:(.text+0x1813): undefined reference to `CLine::statistics'
-diffray.cpp:(.text+0x1839): undefined reference to `CLine::linesCount'
-diffray.cpp:(.text+0x187a): undefined reference to `CLine::linesCount'
-integration.o: In function `CIntegration::InitIntegration(int, int)':
-integration.cpp:(.text+0x18b): undefined reference to `CLine::linesCount'
-integration.cpp:(.text+0x1bb): undefined reference to `CLine::cumulative'
-integration.o: In function `CIntegration::doCalc()':
-integration.cpp:(.text+0x2fc): undefined reference to `CLine::linesCount'
-integration.cpp:(.text+0x654): undefined reference to `CLine::linesCount'
-iterator.o: In function `CIteration::initIteration(int)':
-iterator.cpp:(.text+0x3c): undefined reference to `CLine::linesCount'
-iterator.cpp:(.text+0x5e): undefined reference to `CLine::linesCount'
-iterator.cpp:(.text+0xa2): undefined reference to `CLine::linesCount'
-iterator.o:iterator.cpp:(.text+0xc4): more undefined references to `CLine::linesCount' follow
-rt.o: In function `CRT::calc_cont(int)':
-rt.cpp:(.text+0x176): undefined reference to `CLine::linesEn'
-rt.cpp:(.text+0x1c2): undefined reference to `CLine::cumulative'
-rt.cpp:(.text+0x6cf): undefined reference to `CLine::linesCount'
-rt.cpp:(.text+0x71b): undefined reference to `CLine::emits'
-rt.cpp:(.text+0x763): undefined reference to `CLine::lineIds'
-rt.cpp:(.text+0x770): undefined reference to `CLine::linesEn'
-rt.cpp:(.text+0x8c9): undefined reference to `CLine::e2(double)'
-rt.cpp:(.text+0x8db): undefined reference to `CLine::e2(double)'
-rt.cpp:(.text+0x8ec): undefined reference to `CLine::e2(double)'
-rt.cpp:(.text+0x8fe): undefined reference to `CLine::emits'
-rt.cpp:(.text+0x93a): undefined reference to `CLine::cumulative'
-rt.cpp:(.text+0x944): undefined reference to `CLine::cumulative'
-rt.cpp:(.text+0x94a): undefined reference to `CLine::linesCount'
-rt.cpp:(.text+0x9e9): undefined reference to `CLine::emits'
-rt.cpp:(.text+0xabf): undefined reference to `CLine::iStat'
-rt.cpp:(.text+0xae6): undefined reference to `CLine::statistics'
-rt.cpp:(.text+0xb95): undefined reference to `CLine::linesCount'
-rt.cpp:(.text+0xbad): undefined reference to `CLine::emits'
-rt.cpp:(.text+0xbb6): undefined reference to `CLine::nrows'
-rt.cpp:(.text+0xbff): undefined reference to `CLine::statistics'
-rt.cpp:(.text+0xc1b): undefined reference to `CLine::iStat'
-rt.cpp:(.text+0xe55): undefined reference to `CLine::iStat'
-rt.o: In function `CRT::TauAbsTotal(int)':
-rt.cpp:(.text+0xf03): undefined reference to `CLine::linesEn'
-rt.o: In function `CRT::TauAbsToPoint(int, int)':
-rt.cpp:(.text+0x1063): undefined reference to `CLine::linesEn'
-collect2: error: ld returned 1 exit status
-cp: cannot stat ‘DiffRay3D.exe’: No such file or directory

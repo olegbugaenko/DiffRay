@@ -1,0 +1,891 @@
+rm: не вдалося вилучити './*.exe': Немає такого файла або каталогу
+In file included from abund.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+abund.cpp: In static member function ‘static int Abund::refreshStatistics()’:
+abund.cpp:33:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+abund.cpp: In static member function ‘static int Abund::initSectorials(int)’:
+abund.cpp:40:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+abund.cpp: In static member function ‘static int Abund::putAbunds(int)’:
+abund.cpp:87:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+abund.cpp: In static member function ‘static int Abund::getRadii(int)’:
+abund.cpp:92:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+abund.cpp: In static member function ‘static int Abund::getElementList(int, char*)’:
+abund.cpp:125:45: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[14]’ [-Wformat=]
+   while (sscanf(data, "%s%n", &abel, &offset) == 1)
+                                             ^
+In file included from spectra/isophote.h:3:0,
+                 from app.cpp:8:
+spectra/../continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+spectra/../continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+app.cpp:10:25: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *App::model_name = "wew";
+                         ^~~~~
+app.cpp:11:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *App::data_suffix = "Age60.00Myr.dat";
+                          ^~~~~~~~~~~~~~~~~
+app.cpp: In static member function ‘static bool App::addApperture(double, double, double, double)’:
+app.cpp:80:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+app.cpp: In static member function ‘static bool App::init()’:
+app.cpp:87:10: warning: variable ‘angle’ set but not used [-Wunused-but-set-variable]
+  vector3 angle = vector3(0, M_PI + App::phi, App::theta);
+          ^~~~~
+app.cpp:97:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+app.cpp: In static member function ‘static bool App::initAperture(int)’:
+app.cpp:124:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+app.cpp: In static member function ‘static bool App::setRay(double, double)’:
+app.cpp:130:10: warning: variable ‘angle’ set but not used [-Wunused-but-set-variable]
+  vector3 angle = vector3(0, M_PI + phi, theta);
+          ^~~~~
+app.cpp:144:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+app.cpp: In static member function ‘static bool App::readCommands()’:
+app.cpp:174:45: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::pointsFile);
+                                             ^
+app.cpp:281:25: warning: format ‘%s’ expects a matching ‘char*’ argument [-Wformat=]
+     printf("CHLAB: %s\n");
+                         ^
+app.cpp:297:18: error: ‘chLabTo’ was not declared in this scope
+      printf("%s",chLabTo);
+                  ^~~~~~~
+app.cpp:315:45: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::output_dir);
+                                             ^
+app.cpp:316:48: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::output_dir_in);
+                                                ^
+app.cpp:326:49: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2], "%s", &App::fluxesOutput);
+                                                 ^
+app.cpp:335:44: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::input_dir);
+                                            ^
+app.cpp:340:44: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::data_base);
+                                            ^
+app.cpp:345:45: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::data_bands);
+                                             ^
+basics.cpp: In static member function ‘static int CBasics::startClock()’:
+basics.cpp:56:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+basics.cpp: In static member function ‘static int CBasics::endClock()’:
+basics.cpp:65:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from continuum.cpp:3:0:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+In file included from continuum.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+continuum.cpp: In static member function ‘static int CContinuum::refreshStatistics()’:
+continuum.cpp:35:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::initSectorials(int)’:
+continuum.cpp:56:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::setMeshSize(int)’:
+continuum.cpp:144:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::getRadii(int)’:
+continuum.cpp:192:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::readBands()’:
+continuum.cpp:297:26: warning: unknown escape sequence: '\.'
+       sscanf(ent->d_name," %[^\t\n\.]",fnamebase);
+                          ^~~~~~~~~~~~~
+continuum.cpp: In static member function ‘static int CContinuum::assignBands()’:
+continuum.cpp:343:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::getIonizingSourceEmissivity()’:
+continuum.cpp:393:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::readBands()’:
+continuum.cpp:310:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from continuum.cpp:3:0:
+continuum.h: In member function ‘int IRBand::read_band(char*, char*)’:
+continuum.h:128:3: warning: control reaches end of non-void function [-Wreturn-type]
+   }
+   ^
+continuum.cpp: In static member function ‘static int CContinuum::readInwardFluxes(char*)’:
+continuum.cpp:385:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from integration.h:6:0,
+                 from diffray.cpp:2:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from integration.h:7:0,
+                 from diffray.cpp:2:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+diffray.cpp: In static member function ‘static int CDiffRay::runDiffRay(bool, int)’:
+diffray.cpp:262:74: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 2 has type ‘int’ [-Wformat=]
+      printf("ATTEMPT_BAND_FILE %ld, %ld\n", cBand.iNuLeft, cBand.iNuRight);
+                                                                          ^
+diffray.cpp:262:74: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 3 has type ‘int’ [-Wformat=]
+diffray.cpp:924:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+diffray.cpp: In static member function ‘static int CDiffRay::initializePoints()’:
+diffray.cpp:69:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+diffray.cpp: In static member function ‘static int CDiffRay::launch()’:
+diffray.cpp:85:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+diffray.cpp: In static member function ‘static int CDiffRay::runDiffRay(bool, int)’:
+diffray.cpp:294:22: warning: ‘bandFile’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      fclose(bandFile);
+                      ^
+geom3D.cpp: In function ‘vector3* intersectSphere(TRay, long double, vector3*)’:
+geom3D.cpp:143:167: warning: format ‘%le’ expects argument of type ‘double’, but argument 3 has type ‘long double’ [-Wformat=]
+   fprintf(FST, "Radius: %le; Ray: start [%Le;%Le;%Le];[%Le;%Le] b=%Le;c=%Le; D=%Le\n",radius, ray.start.x, ray.start.y, ray.start.z, ray.angle.y, ray.angle.z, b, c, D);
+                                                                                                                                                                       ^
+geom3D.cpp: In function ‘THalfplane create(TPlane, vector3, int)’:
+geom3D.cpp:304:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geom3D.cpp: In function ‘THalfplane createFromAngles(double, double, double)’:
+geom3D.cpp:314:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geom3D.cpp: In function ‘vector3 intersectHalfplane(TRay, THalfplane)’:
+geom3D.cpp:319:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geom3D.cpp: In function ‘vector3 intersectRayWithPhi(TRay, double)’:
+geom3D.cpp:332:10: warning: variable ‘axis’ set but not used [-Wunused-but-set-variable]
+  vector3 axis = makeOrt(0.0, M_PI/2.0);
+          ^~~~
+In file included from geometry.cpp:1:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+geometry.cpp: In static member function ‘static int CGeometry::readSectors(char*)’:
+geometry.cpp:18:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geometry.cpp: In static member function ‘static int CGeometry::readRadiuses(char*, int, double)’:
+geometry.cpp:25:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    CGeometry::readSectors();
+                           ^
+geometry.cpp: In static member function ‘static int CGeometry::getRadii(int)’:
+geometry.cpp:61:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geometry.cpp: In static member function ‘static int CGeometry::readRadiuses(char*, int, double)’:
+geometry.cpp:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from grain_temp.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+grain_temp.cpp: In static member function ‘static int GrainTemp::refreshStatistics()’:
+grain_temp.cpp:32:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+grain_temp.cpp: In static member function ‘static int GrainTemp::initSectorials(int)’:
+grain_temp.cpp:42:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+grain_temp.cpp: In static member function ‘static int GrainTemp::putTemps(int)’:
+grain_temp.cpp:90:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+grain_temp.cpp: In static member function ‘static int GrainTemp::getRadii(int)’:
+grain_temp.cpp:95:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+integration.cpp:258:58: warning: "/*" within comment [-Wcomment]
+      CIntegration::flux_continua[i] += CRT::ray_cont[i];//*CRT::dS;
+                                                           
+integration.cpp:260:59: warning: "/*" within comment [-Wcomment]
+      CIntegration::flux_intrinsic[i] += CRT::ray_intr[i];//*CRT::dS;
+                                                            
+In file included from integration.cpp:5:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from integration.cpp:6:0:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+integration.cpp: In static member function ‘static int CIntegration::statisticRay()’:
+integration.cpp:73:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+integration.cpp: In static member function ‘static int CIntegration::InitIntegration(int, int)’:
+integration.cpp:126:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+integration.cpp: In static member function ‘static int CIntegration::doCalc()’:
+integration.cpp:168:10: warning: unused variable ‘phi’ [-Wunused-variable]
+   double phi = App::AppDPhi - (App::phi_width-dphi)/2;
+          ^~~
+integration.cpp:169:10: warning: unused variable ‘theta’ [-Wunused-variable]
+   double theta = App::AppDTheta - (App::theta_width-dtheta)/2;
+          ^~~~~
+integration.cpp:171:10: warning: unused variable ‘phi_max’ [-Wunused-variable]
+   double phi_max = App::AppDPhi + (App::phi_width-dphi)/2;
+          ^~~~~~~
+integration.cpp:172:10: warning: unused variable ‘theta_max’ [-Wunused-variable]
+   double theta_max = App::AppDTheta + (App::theta_width-dtheta)/2;
+          ^~~~~~~~~
+integration.cpp:175:7: warning: unused variable ‘iskip_phi’ [-Wunused-variable]
+   int iskip_phi = 0;
+       ^~~~~~~~~
+integration.cpp:176:7: warning: unused variable ‘iskip_theta’ [-Wunused-variable]
+   int iskip_theta = 0;
+       ^~~~~~~~~~~
+integration.cpp:177:7: warning: unused variable ‘skip_param’ [-Wunused-variable]
+   int skip_param = 5;
+       ^~~~~~~~~~
+integration.cpp:135:12: warning: unused variable ‘sum’ [-Wunused-variable]
+  long long sum = 0;
+            ^~~
+integration.cpp:289:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+integration.cpp: In static member function ‘static int CIntegration::finish()’:
+integration.cpp:295:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from iterator.cpp:3:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from iterator.cpp:4:0:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+iterator.cpp: In static member function ‘static int CIteration::obtainStatistics()’:
+iterator.cpp:21:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+iterator.cpp: In static member function ‘static int CIteration::initIteration(int)’:
+iterator.cpp:54:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+iterator.cpp: In static member function ‘static int CIteration::doIteration()’:
+iterator.cpp:87:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from lines.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+lines.cpp: In static member function ‘static int CLine::refreshStatistics()’:
+lines.cpp:36:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+lines.cpp: In static member function ‘static int CLine::initSectorials(int)’:
+lines.cpp:43:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+lines.cpp: In static member function ‘static int CLine::putLine(int)’:
+lines.cpp:96:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+lines.cpp: In static member function ‘static int CLine::getRadii(int)’:
+lines.cpp:101:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+lines.cpp: In static member function ‘static int CLine::getLineList(int, char*)’:
+lines.cpp:131:6: warning: unused variable ‘idSorted’ [-Wunused-variable]
+  int idSorted[100];
+      ^~~~~~~~
+lines.cpp: In static member function ‘static int CLine::readDatabase()’:
+lines.cpp:233:6: warning: unused variable ‘nC2’ [-Wunused-variable]
+  int nC2    = CReader::calc_lines_number(LDB2,15);
+      ^~~
+lines.cpp:293:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from main.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from main.cpp:6:0:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+main.cpp: In function ‘int main(int, char**)’:
+main.cpp:233:4: warning: format ‘%le’ expects argument of type ‘double’, but argument 4 has type ‘long double’ [-Wformat=]
+    );
+    ^
+main.cpp:233:4: warning: format ‘%le’ expects argument of type ‘double’, but argument 5 has type ‘long double’ [-Wformat=]
+main.cpp:66:11: warning: unused variable ‘resarr’ [-Wunused-variable]
+  double **resarr;
+           ^~~~~~
+In file included from physics.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+physics.cpp: In static member function ‘static int Physics::refreshStatistics()’:
+physics.cpp:26:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+physics.cpp: In static member function ‘static int Physics::initSectorials(int)’:
+physics.cpp:35:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+physics.cpp: In static member function ‘static int Physics::putPhysics(int)’:
+physics.cpp:80:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+physics.cpp: In static member function ‘static int Physics::getRadii(int)’:
+physics.cpp:85:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+reader.cpp: In static member function ‘static char** CReader::read_commands(FILE*)’:
+reader.cpp:40:8: warning: unused variable ‘isQuoted’ [-Wunused-variable]
+   bool isQuoted = false;
+        ^~~~~~~~
+reader.cpp: In static member function ‘static int CReader::read_file_array(FILE*, int, int, int, int (*)(int), int (*)(int), int (*)(int, int, double), int (*)(int, char*))’:
+reader.cpp:167:46: warning: too many arguments for format [-Wformat-extra-args]
+   while ( sscanf(ptr, "%s[\t\n]", strdata, &n) == 1 && !iSkip)
+                                              ^
+reader.cpp:127:9: warning: unused variable ‘val’ [-Wunused-variable]
+  double val;
+         ^~~
+reader.cpp: In static member function ‘static int CReader::callable(int)’:
+reader.cpp:197:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from rt.cpp:5:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from rt.cpp:6:0:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+rt.cpp: In static member function ‘static int CRT::calc_ray(int)’:
+rt.cpp:38:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+rt.cpp: In static member function ‘static int CRT::obtainIntrinsic()’:
+rt.cpp:49:7: warning: variable ‘passedCenter’ set but not used [-Wunused-but-set-variable]
+  bool passedCenter = false;
+       ^~~~~~~~~~~~
+rt.cpp: In static member function ‘static int CRT::obtainContinua()’:
+rt.cpp:204:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+rt.cpp: In static member function ‘static int CRT::calc_cont(int)’:
+rt.cpp:227:8: warning: unused variable ‘FP_DUMP’ [-Wunused-variable]
+  FILE* FP_DUMP;
+        ^~~~~~~
+rt.cpp: In static member function ‘static int CRT::obtainIntrinsic()’:
+rt.cpp:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from solver.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from integration.h:7:0,
+                 from solver.cpp:5:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+solver.cpp: In static member function ‘static int CSolver::getPoints()’:
+solver.cpp:493:338: warning: format ‘%le’ expects argument of type ‘double’, but argument 12 has type ‘long double’ [-Wformat=]
+    fprintf(FP,"Sector: %d/%d (%d - %lf); Layer: %d/%d; Point: %Le;%Le;%Le; R=%le\n", CSolver::points[i].sec_p, CSolver::points[i].sec_n,CSolver::points[i].is,CSolver::points[i].phi, CSolver::points[i].lay_p, CSolver::points[i].lay_n, CSolver::points[i].point.x, CSolver::points[i].point.y, CSolver::points[i].point.z,CSolver::points[i].R);
+                                                                                                                                                                                                                                                                                                                                                  ^
+In file included from integration/matrix.h:4:0,
+                 from integration/matrix.cpp:1:
+integration/../continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+integration/../continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+In file included from integration/../integration.h:6:0,
+                 from integration/matrix.cpp:2:
+integration/../geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from output/../integration.h:6:0,
+                 from output/prt_lines.h:5,
+                 from output/output_handler.cpp:2:
+output/../geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from output/../integration.h:7:0,
+                 from output/prt_lines.h:5,
+                 from output/output_handler.cpp:2:
+output/../continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+output/../continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+In file included from output/output_handler.cpp:4:0:
+output/prt_isophote.h: In static member function ‘static int PrtIsophote::plot()’:
+output/prt_isophote.h:109:2: warning: no return statement in function returning non-void [-Wreturn-type]
+  }
+  ^
+In file included from spectra/isophote.h:3:0,
+                 from spectra/isophotes.cpp:1:
+spectra/../continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+spectra/../continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+In file included from statistics/../integration/matrix.h:4:0,
+                 from statistics/../integration/angular.h:2,
+                 from statistics/stats_angle.h:3,
+                 from statistics/statistics.h:3,
+                 from statistics/statistics.cpp:1:
+statistics/../integration/../continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+statistics/../integration/../continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+In file included from statistics/statistics.cpp:9:0:
+statistics/../geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+statistics/statistics.cpp: In static member function ‘static double CStatistics::shouldInclude()’:
+statistics/statistics.cpp:51:133: warning: format ‘%Le’ expects argument of type ‘long double’, but argument 6 has type ‘double’ [-Wformat=]
+   printf("i=%d! (%d;%d) <= (%Le;%Le;%Le) Something went not as intended\n",i, ip,it, rayTheta, App::AppDTheta, App::rayToObj.angle.z);
+                                                                                                                                     ^
+continuum.o: у функції «CContinuum::readBands()»:
+continuum.cpp:(.text+0xb97): невизначене посилання «App::data_bands»
+continuum.cpp:(.text+0xc37): невизначене посилання «App::data_bands»
+continuum.cpp:(.text+0xca3): невизначене посилання «App::data_base»
+continuum.cpp:(.text+0x10a8): невизначене посилання «App::data_bands»
+main.o: у функції «main»:
+main.cpp:(.text.startup+0x21): невизначене посилання «App::commands_path»
+main.cpp:(.text.startup+0x2f): невизначене посилання «App::commands_path»
+main.cpp:(.text.startup+0x42): невизначене посилання «App::readCommands()»
+main.cpp:(.text.startup+0x49): невизначене посилання «App::output_dir»
+main.cpp:(.text.startup+0x51): невизначене посилання «App::theta_width»
+main.cpp:(.text.startup+0x59): невизначене посилання «App::phi_width»
+main.cpp:(.text.startup+0x60): невизначене посилання «App::input_dir»
+main.cpp:(.text.startup+0x68): невизначене посилання «App::age»
+main.cpp:(.text.startup+0x7f): невизначене посилання «App::nSectors»
+main.cpp:(.text.startup+0x9b): невизначене посилання «App::input_dir»
+main.cpp:(.text.startup+0xb9): невизначене посилання «App::nSectors»
+main.cpp:(.text.startup+0xc5): невизначене посилання «App::coverSector»
+main.cpp:(.text.startup+0xcd): невизначене посилання «App::age»
+main.cpp:(.text.startup+0x10e): невизначене посилання «App::age»
+main.cpp:(.text.startup+0x146): невизначене посилання «App::nSectors»
+main.cpp:(.text.startup+0x1d1): невизначене посилання «App::CalcLines»
+main.cpp:(.text.startup+0x1f4): невизначене посилання «App::input_dir»
+main.cpp:(.text.startup+0x202): невизначене посилання «App::coverSector»
+main.cpp:(.text.startup+0x20a): невизначене посилання «App::age»
+main.cpp:(.text.startup+0x27c): невизначене посилання «App::age»
+main.cpp:(.text.startup+0x283): невизначене посилання «App::input_dir»
+main.cpp:(.text.startup+0x34f): невизначене посилання «App::input_dir»
+main.cpp:(.text.startup+0x38a): невизначене посилання «App::CalcCont»
+main.cpp:(.text.startup+0x397): невизначене посилання «App::CalcAbund»
+main.cpp:(.text.startup+0x3a4): невизначене посилання «App::CalcGrainTemp»
+main.cpp:(.text.startup+0x3c2): невизначене посилання «App::coverSector»
+main.cpp:(.text.startup+0x3ca): невизначене посилання «App::age»
+main.cpp:(.text.startup+0x3f4): невизначене посилання «App::age»
+main.cpp:(.text.startup+0x41a): невизначене посилання «App::age»
+main.cpp:(.text.startup+0x43d): невизначене посилання «App::age»
+main.cpp:(.text.startup+0x460): невизначене посилання «App::age»
+main.o:main.cpp:(.text.startup+0x483): нижче інші невизначені посилання на «App::age»
+main.o: у функції «main»:
+main.cpp:(.text.startup+0x4cb): невизначене посилання «App::CalcCont»
+main.cpp:(.text.startup+0x4d8): невизначене посилання «App::CalcOpac»
+main.cpp:(.text.startup+0x4e5): невизначене посилання «App::CalcLines»
+main.cpp:(.text.startup+0x4f2): невизначене посилання «App::CalcAbund»
+main.cpp:(.text.startup+0x4ff): невизначене посилання «App::CalcCont»
+main.cpp:(.text.startup+0x516): невизначене посилання «App::CalcGrainTemp»
+main.cpp:(.text.startup+0x550): невизначене посилання «App::CalcIRBands»
+main.cpp:(.text.startup+0x674): невизначене посилання «App::AppMode»
+main.cpp:(.text.startup+0x688): невизначене посилання «App::output_dir_in»
+main.cpp:(.text.startup+0x6ae): невизначене посилання «App::nApps»
+main.cpp:(.text.startup+0x6d3): невизначене посилання «App::initAperture(int)»
+main.cpp:(.text.startup+0x6db): невизначене посилання «App::AppDTheta»
+main.cpp:(.text.startup+0x6e1): невизначене посилання «App::rayToObj»
+main.cpp:(.text.startup+0x6e9): невизначене посилання «App::AppDPhi»
+main.cpp:(.text.startup+0x6ef): невизначене посилання «App::rayToObj»
+main.cpp:(.text.startup+0x6f5): невизначене посилання «App::rayToObj»
+main.cpp:(.text.startup+0x6fb): невизначене посилання «App::rayToObj»
+main.cpp:(.text.startup+0x74a): невизначене посилання «App::nApps»
+main.cpp:(.text.startup+0x828): невизначене посилання «App::age»
+main.cpp:(.text.startup+0x82f): невизначене посилання «App::input_dir»
+main.cpp:(.text.startup+0x85c): невизначене посилання «App::commands_path»
+solver.o: у функції «normalizeSector(int)»:
+solver.cpp:(.text+0x2): невизначене посилання «App::nSectors»
+solver.o: у функції «normalizeCone(int)»:
+solver.cpp:(.text+0x62): невизначене посилання «App::nSectors»
+solver.o: у функції «CSolver::getPointsCones()»:
+solver.cpp:(.text+0xb4): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xc3): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xd2): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xe1): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xf0): невизначене посилання «App::rayIntegration»
+solver.o:solver.cpp:(.text+0xff): нижче інші невизначені посилання на «App::rayIntegration»
+solver.o: у функції «CSolver::getPointsCones()»:
+solver.cpp:(.text+0x17e): невизначене посилання «App::output_dir»
+solver.cpp:(.text+0x1b5): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x1c7): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x1d3): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x1df): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x209): невизначене посилання «App::isStatMode»
+solver.cpp:(.text+0x260): невизначене посилання «App::nSectors»
+solver.cpp:(.text+0x455): невизначене посилання «App::isStatMode»
+solver.cpp:(.text+0x567): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x56d): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x573): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x579): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x57f): невизначене посилання «App::rayIntegration»
+solver.o:solver.cpp:(.text+0x585): нижче інші невизначені посилання на «App::rayIntegration»
+solver.o: у функції «CSolver::getPointsCones()»:
+solver.cpp:(.text+0x712): невизначене посилання «App::isStatMode»
+solver.cpp:(.text+0x77b): невизначене посилання «App::nSectors»
+solver.cpp:(.text+0x89f): невизначене посилання «App::nSectors»
+solver.cpp:(.text+0x9b9): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x9bf): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x9c5): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x9cb): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x9d1): невизначене посилання «App::rayIntegration»
+solver.o:solver.cpp:(.text+0x9d7): нижче інші невизначені посилання на «App::rayIntegration»
+solver.o: у функції «CSolver::getPointsSectors()»:
+solver.cpp:(.text+0xae7): невизначене посилання «App::output_dir»
+solver.cpp:(.text+0xb02): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xb08): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xb17): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xb26): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xb35): невизначене посилання «App::rayIntegration»
+solver.o:solver.cpp:(.text+0xb44): нижче інші невизначені посилання на «App::rayIntegration»
+solver.o: у функції «CSolver::getPointsSectors()»:
+solver.cpp:(.text+0xc3e): невизначене посилання «App::isStatMode»
+solver.cpp:(.text+0xc61): невизначене посилання «App::nSectors»
+solver.cpp:(.text+0xe9e): невизначене посилання «App::isStatMode»
+solver.cpp:(.text+0xfad): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xfb3): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xfb9): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xfbf): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0xfc5): невизначене посилання «App::rayIntegration»
+solver.o:solver.cpp:(.text+0xfcb): нижче інші невизначені посилання на «App::rayIntegration»
+solver.o: у функції «CSolver::getPointsSectors()»:
+solver.cpp:(.text+0x113f): невизначене посилання «App::nSectors»
+solver.cpp:(.text+0x122c): невизначене посилання «App::nSectors»
+solver.cpp:(.text+0x1319): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x131f): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x1325): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x132b): невизначене посилання «App::rayIntegration»
+solver.cpp:(.text+0x1331): невизначене посилання «App::rayIntegration»
+solver.o:solver.cpp:(.text+0x1337): нижче інші невизначені посилання на «App::rayIntegration»
+solver.o: у функції «CSolver::getPoints()»:
+solver.cpp:(.text+0x1443): невизначене посилання «App::geometryType»
+solver.cpp:(.text+0x1652): невизначене посилання «App::isStatMode»
+solver.cpp:(.text+0x1682): невизначене посилання «App::output_dir»
+diffray.o: у функції «CDiffRay::initializePoints() [clone .part.0]»:
+diffray.cpp:(.text+0x37): невизначене посилання «App::pointsFile»
+diffray.cpp:(.text+0x41): невизначене посилання «App::input_dir»
+diffray.cpp:(.text+0xbe): невизначене посилання «App::nSkipPoints»
+diffray.o: у функції «CDiffRay::initializePoints()»:
+diffray.cpp:(.text+0x182): невизначене посилання «App::pointsSource»
+diffray.o: у функції «CDiffRay::runDiffRay(bool, int)»:
+diffray.cpp:(.text+0x1ca): невизначене посилання «App::integration_mode»
+diffray.cpp:(.text+0x1f7): невизначене посилання «App::isStatMode»
+diffray.cpp:(.text+0x267): невизначене посилання «App::precision»
+diffray.cpp:(.text+0x286): невизначене посилання «App::maxiterations»
+diffray.cpp:(.text+0x2b6): невизначене посилання «App::CalcLines»
+diffray.cpp:(.text+0x2d4): невизначене посилання «App::CalcCont»
+diffray.cpp:(.text+0x313): невизначене посилання «App::AppMode»
+diffray.cpp:(.text+0x335): невизначене посилання «App::CalcCont»
+diffray.cpp:(.text+0x342): невизначене посилання «App::CalcLines»
+diffray.cpp:(.text+0x354): невизначене посилання «App::CalcLines»
+diffray.cpp:(.text+0x362): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x3ff): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x41f): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x43f): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x45c): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x473): невизначене посилання «App::iApp»
+diffray.cpp:(.text+0x48f): невизначене посилання «App::iApp»
+diffray.cpp:(.text+0x650): невизначене посилання «App::printBands»
+diffray.cpp:(.text+0x73e): невизначене посилання «App::printBands»
+diffray.cpp:(.text+0x770): невизначене посилання «App::cov_fac»
+diffray.cpp:(.text+0x992): невизначене посилання «App::distance»
+diffray.cpp:(.text+0xa49): невизначене посилання «App::distance»
+diffray.cpp:(.text+0xb25): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0xb49): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0xbd5): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0xcb8): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0xeee): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x1201): невизначене посилання «App::fluxesOutput»
+diffray.cpp:(.text+0x1208): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x1245): невизначене посилання «App::distance»
+diffray.cpp:(.text+0x1ffd): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x24f7): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x29ac): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x2adb): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x2f1c): невизначене посилання «App::output_dir»
+diffray.o:diffray.cpp:(.text+0x31d8): нижче інші невизначені посилання на «App::output_dir»
+diffray.o: у функції «CDiffRay::runDiffRay(bool, int)»:
+diffray.cpp:(.text+0x34cd): невизначене посилання «App::distance»
+diffray.cpp:(.text+0x35af): невизначене посилання «App::output_dir»
+diffray.cpp:(.text+0x364c): невизначене посилання «App::output_dir»
+diffray.o: у функції «CDiffRay::launch()»:
+diffray.cpp:(.text+0x3688): невизначене посилання «App::pointsSource»
+diffray.cpp:(.text+0x3690): невизначене посилання «App::init()»
+diffray.cpp:(.text+0x36dd): невизначене посилання «App::distance»
+diffray.cpp:(.text+0x36e2): невизначене посилання «App::init()»
+geom3D.o: у функції «intersectSphere(TRay, long double, vector3*)»:
+geom3D.cpp:(.text+0xf53): невизначене посилання «App::isStatMode»
+geom3D.cpp:(.text+0x1096): невизначене посилання «App::output_dir»
+geom3D.o: у функції «intersectRayWithCone(TRay, double, vector3*)»:
+geom3D.cpp:(.text+0x13e2): невизначене посилання «App::isStatMode»
+geom3D.cpp:(.text+0x1580): невизначене посилання «App::output_dir»
+geometry.o: у функції «CGeometry::readSectors(char*)»:
+geometry.cpp:(.text+0xd4): невизначене посилання «App::nSectors»
+geometry.o: у функції «CGeometry::readRadiuses(char*, int, double)»:
+geometry.cpp:(.text+0x363): невизначене посилання «App::nSectors»
+grain_temp.o: у функції «GrainTemp::initSectorials(int)»:
+grain_temp.cpp:(.text+0x1c2): невизначене посилання «App::CalcGrainTemp»
+grain_temp.o: у функції «GrainTemp::readTemps(char*, int)»:
+grain_temp.cpp:(.text+0x2a2): невизначене посилання «App::CalcGrainTemp»
+integration.o: у функції «CIntegration::iterateOverSource(double, double, double, double)»:
+integration.cpp:(.text+0x3): невизначене посилання «App::isIrregularSource»
+integration.cpp:(.text+0x1a): невизначене посилання «App::distance»
+integration.o: у функції «CIntegration::statisticRay()»:
+integration.cpp:(.text+0xd2): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0xdf): невизначене посилання «App::isStatMode»
+integration.cpp:(.text+0xe8): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0xee): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0xf4): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0xfa): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x100): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x106): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x10c): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x112): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x118): невизначене посилання «App::AppDPhi»
+integration.cpp:(.text+0x11e): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x124): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x12a): невизначене посилання «App::AppDTheta»
+integration.cpp:(.text+0x130): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x185): невизначене посилання «App::isStatMode»
+integration.o: у функції «CIntegration::doCalc()»:
+integration.cpp:(.text+0x4f7): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x50a): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x510): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x516): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x51c): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x522): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x528): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x52e): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x534): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x53a): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x540): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x546): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x6dc): невизначене посилання «App::isIrregularSource»
+integration.cpp:(.text+0x6f0): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x6f6): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x6fc): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x702): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x708): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x70e): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x714): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x71a): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x720): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x726): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x72c): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x732): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x75c): невизначене посилання «App::phi_width»
+integration.cpp:(.text+0x764): невизначене посилання «App::theta_width»
+integration.cpp:(.text+0x76a): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x77e): невизначене посилання «App::AppDTheta»
+integration.cpp:(.text+0x78c): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x792): невизначене посилання «App::AppDPhi»
+integration.cpp:(.text+0x8e4): невизначене посилання «App::usePredictiveMode»
+integration.cpp:(.text+0xf33): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0xf3a): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0xf7c): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0xf82): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0xf88): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0xf8e): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0xf94): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0xf9a): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0xfa2): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0xfab): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0xfba): невизначене посилання «App::punchStatistics»
+integration.cpp:(.text+0x1169): невизначене посилання «App::distance»
+integration.cpp:(.text+0x119f): невизначене посилання «App::maxPhiCen»
+integration.cpp:(.text+0x11ad): невизначене посилання «App::maxPhiCen»
+integration.cpp:(.text+0x11b3): невизначене посилання «App::minPhiCen»
+integration.cpp:(.text+0x11bd): невизначене посилання «App::minPhiCen»
+integration.cpp:(.text+0x11ca): невизначене посилання «App::maxThetaCen»
+integration.cpp:(.text+0x11d8): невизначене посилання «App::maxThetaCen»
+integration.cpp:(.text+0x11de): невизначене посилання «App::minThetaCen»
+integration.cpp:(.text+0x11e8): невизначене посилання «App::minThetaCen»
+integration.cpp:(.text+0x1259): невизначене посилання «App::phi_width»
+integration.cpp:(.text+0x1261): невизначене посилання «App::theta_width»
+integration.cpp:(.text+0x12cb): невизначене посилання «App::phi_width»
+integration.cpp:(.text+0x12d3): невизначене посилання «App::theta_width»
+integration.cpp:(.text+0x14ee): невизначене посилання «App::minPhiCen»
+integration.cpp:(.text+0x14fd): невизначене посилання «App::maxThetaCen»
+integration.cpp:(.text+0x150a): невизначене посилання «App::minThetaCen»
+integration.cpp:(.text+0x1512): невизначене посилання «App::maxPhiCen»
+integration.cpp:(.text+0x15fb): невизначене посилання «App::distance»
+integration.cpp:(.text+0x1d0b): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x1d12): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x1d39): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x1d3f): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x1d45): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x1d4b): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x1d51): невизначене посилання «App::rayToObj»
+integration.cpp:(.text+0x1d57): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x1d5f): невизначене посилання «App::punchStatistics»
+integration.cpp:(.text+0x1d66): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x1d6f): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x1f1e): невизначене посилання «App::distance»
+integration.cpp:(.text+0x1f4f): невизначене посилання «App::maxPhiCen»
+integration.cpp:(.text+0x1f5d): невизначене посилання «App::maxPhiCen»
+integration.cpp:(.text+0x1f63): невизначене посилання «App::minPhiCen»
+integration.cpp:(.text+0x1f6d): невизначене посилання «App::minPhiCen»
+integration.cpp:(.text+0x1f7f): невизначене посилання «App::maxThetaCen»
+integration.cpp:(.text+0x1f8d): невизначене посилання «App::maxThetaCen»
+integration.cpp:(.text+0x1f93): невизначене посилання «App::minThetaCen»
+integration.cpp:(.text+0x1f9d): невизначене посилання «App::minThetaCen»
+integration.cpp:(.text+0x24a5): невизначене посилання «App::phi_width»
+integration.cpp:(.text+0x24ad): невизначене посилання «App::distance»
+integration.cpp:(.text+0x24b9): невизначене посилання «App::AppDPhi»
+integration.cpp:(.text+0x24cd): невизначене посилання «App::AppDTheta»
+integration.cpp:(.text+0x24e0): невизначене посилання «App::theta_width»
+integration.cpp:(.text+0x2584): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x2599): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x259f): невизначене посилання «App::rayIntegration»
+integration.cpp:(.text+0x25aa): невизначене посилання «App::rayIntegration»
+isophotes.o: у функції «CIsophotes::resetApp()»:
+isophotes.cpp:(.text+0x2fa): невизначене посилання «App::rayToObj»
+isophotes.cpp:(.text+0x308): невизначене посилання «App::AppDPhi»
+isophotes.cpp:(.text+0x325): невизначене посилання «App::phi_width»
+isophotes.cpp:(.text+0x349): невизначене посилання «App::rayToObj»
+isophotes.cpp:(.text+0x34f): невизначене посилання «App::AppDTheta»
+isophotes.cpp:(.text+0x374): невизначене посилання «App::theta_width»
+isophotes.cpp:(.text+0x394): невизначене посилання «App::theta_width»
+isophotes.cpp:(.text+0x39c): невизначене посилання «App::phi_width»
+lines.o: у функції «CLine::readDatabase()»:
+lines.cpp:(.text+0x497): невизначене посилання «App::data_base»
+lines.cpp:(.text+0x4e4): невизначене посилання «App::data_base»
+lines.o: у функції «CLine::toLuminosity(double)»:
+lines.cpp:(.text+0xa34): невизначене посилання «App::distance»
+matrix.o: у функції «CMatrix::addFluxes(double&)»:
+matrix.cpp:(.text+0x92): невизначене посилання «App::CalcCont»
+matrix.cpp:(.text+0x3f7): невизначене посилання «App::CalcLines»
+matrix.cpp:(.text+0x40d): невизначене посилання «App::CalcCont»
+matrix.o: у функції «CMatrix::getRaysFi()»:
+matrix.cpp:(.text+0x6b9): невизначене посилання «App::CalcCont»
+output_handler.o: у функції «OutputHandler::lifr()»:
+output_handler.cpp:(.text+0x32): невизначене посилання «App::output_dir»
+output_handler.o: у функції «OutputHandler::llum()»:
+output_handler.cpp:(.text+0x1d2): невизначене посилання «App::output_dir»
+output_handler.o: у функції «OutputHandler::linesarr()»:
+output_handler.cpp:(.text+0x379): невизначене посилання «App::output_dir»
+output_handler.cpp:(.text+0x41b): невизначене посилання «App::distance»
+output_handler.o: у функції «OutputHandler::contarr()»:
+output_handler.cpp:(.text+0x530): невизначене посилання «App::output_dir»
+output_handler.o: у функції «OutputHandler::spectra()»:
+output_handler.cpp:(.text+0x680): невизначене посилання «App::output_dir»
+output_handler.cpp:(.text+0x73a): невизначене посилання «App::distance»
+output_handler.o: у функції «OutputHandler::isophotes()»:
+output_handler.cpp:(.text+0x872): невизначене посилання «App::output_dir»
+output_handler.cpp:(.text+0x902): невизначене посилання «App::rayToObj»
+output_handler.cpp:(.text+0x921): невизначене посилання «App::rayToObj»
+output_handler.o: у функції «PrtIsophote::plot()»:
+output_handler.cpp:(.text._ZN11PrtIsophote4plotEv[_ZN11PrtIsophote4plotEv]+0x7): невизначене посилання «App::output_dir»
+output_handler.cpp:(.text._ZN11PrtIsophote4plotEv[_ZN11PrtIsophote4plotEv]+0x73): невизначене посилання «App::output_dir»
+output_handler.cpp:(.text._ZN11PrtIsophote4plotEv[_ZN11PrtIsophote4plotEv]+0x16d): невизначене посилання «App::iApp»
+output_handler.cpp:(.text._ZN11PrtIsophote4plotEv[_ZN11PrtIsophote4plotEv]+0x183): невизначене посилання «App::age»
+rt.o: у функції «CRT::obtainContinua()»:
+rt.cpp:(.text+0x499): невизначене посилання «App::onlySectorNo»
+rt.cpp:(.text+0x4d7): невизначене посилання «App::CalcCont»
+rt.cpp:(.text+0x598): невизначене посилання «App::CalcOpac»
+rt.cpp:(.text+0x622): невизначене посилання «App::CalcOpac»
+rt.cpp:(.text+0x668): невизначене посилання «App::CalcLines»
+rt.cpp:(.text+0x75b): невизначене посилання «App::CalcOpac»
+rt.cpp:(.text+0x7a9): невизначене посилання «App::CalcOpac»
+rt.cpp:(.text+0xa52): невизначене посилання «App::CalcOpac»
+statistics.o: у функції «CStatistics::initAngles()»:
+statistics.cpp:(.text+0x48): невизначене посилання «App::phi_width»
+statistics.cpp:(.text+0x63): невизначене посилання «App::theta_width»
+statistics.cpp:(.text+0xbb): невизначене посилання «App::AppDPhi»
+statistics.cpp:(.text+0x138): невизначене посилання «App::AppDTheta»
+statistics.o: у функції «CStatistics::shouldInclude()»:
+statistics.cpp:(.text+0x167): невизначене посилання «App::rayIntegration»
+statistics.cpp:(.text+0x170): невизначене посилання «App::rayIntegration»
+statistics.cpp:(.text+0x176): невизначене посилання «App::AppDPhi»
+statistics.cpp:(.text+0x17c): невизначене посилання «App::rayToObj»
+statistics.cpp:(.text+0x190): невизначене посилання «App::phi_width»
+statistics.cpp:(.text+0x1ab): невизначене посилання «App::AppDTheta»
+statistics.cpp:(.text+0x1b1): невизначене посилання «App::rayToObj»
+statistics.cpp:(.text+0x1bf): невизначене посилання «App::theta_width»
+statistics.cpp:(.text+0x20f): невизначене посилання «App::rayToObj»
+statistics.cpp:(.text+0x21c): невизначене посилання «App::rayToObj»
+statistics.cpp:(.text+0x224): невизначене посилання «App::AppDTheta»
+statistics.o: у функції «CStatistics::run()»:
+statistics.cpp:(.text+0x4e3): невизначене посилання «App::iApp»
+statistics.cpp:(.text+0x6dc): невизначене посилання «App::CalcOverviews»
+collect2: error: ld returned 1 exit status
+cp: не вдалося виконати stat для 'DiffRay3D.exe': Немає такого файла або каталогу
+cp: не вдалося виконати stat для 'DiffRay3D.exe': Немає такого файла або каталогу

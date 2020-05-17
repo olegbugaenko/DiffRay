@@ -20,6 +20,7 @@ public:
 	static bool CalcAbund;
 	static bool CalcIRBands;
 	static bool CalcGrainTemp;
+	static bool CalcOverviews;
 	static double age;
 	static char output_dir[255];
 	static char output_dir_in[255];
@@ -42,6 +43,7 @@ public:
 	static int maxiterations;
 	static double precision;
 	static bool punchStatistics;
+	static bool printBands;
 
 	
 	static bool init();

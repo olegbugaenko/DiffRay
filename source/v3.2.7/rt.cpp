@@ -337,7 +337,9 @@ int CRT::calc_cont(int mode)
 		{
 			Abund::statistics[CLine::iStat][0] = path_total;
 			CLine::statistics[CLine::iStat][0] = path_total;
-			GrainTemp::statistics[CLine::iStat][0] = path_total;		
+			GrainTemp::statistics[CLine::iStat][0] = path_total;	
+			Physics::statistics[CLine::iStat][0] = path_total;	
+			CContinuum::statistics[CLine::iStat][0] = path_total;	
 			
 			for(int i=0;i<Abund::nElements;i++)
 			{
@@ -366,11 +368,27 @@ int CRT::calc_cont(int mode)
 			{
 				double Z = 0.;
 
-				if(sector > -1 && ilayer > -1 && ilayer < CLine::nrows)
+				if(sector > -1 && ilayer > -1 && ilayer < CGeometry::nRadiuses[sector])
 				{
 					
 					Z = CLine::emits[sector][ilayer][i];
 					CLine::statistics[CLine::iStat][i+1] = Z;
+				}
+				
+			}
+
+			for(int i=0;i<CContinuum::nbands;i++)
+			{
+				double Z = 0.;
+
+				if(sector > -1 && ilayer > -1 && ilayer < CGeometry::nRadiuses[sector])
+				{
+					
+					Z = CContinuum::getBandEmissivity(i, sector, ilayer);
+					if(i == 21) {
+						printf("%d %le Continuum at %d %d %d = %le\n", CLine::iStat, CContinuum::statistics[CLine::iStat][0], sector, ilayer, i+1, Z);	
+					}
+					CContinuum::statistics[CLine::iStat][i+1] = Z;
 				}
 				
 			}
@@ -390,6 +408,27 @@ int CRT::calc_cont(int mode)
 					}*/
 					
 					GrainTemp::statistics[CLine::iStat][i+1] = Z;
+				}
+				
+			}
+
+			if(App::CalcOverviews)
+			{
+				double Z = 0.;
+
+				if(sector > -1 && ilayer > -1)
+				{
+					//printf("S: %d/19, L: %d, B: %d (%d)\n", sector, ilayer, i, GrainTemp::nBins);
+					Physics::statistics[CLine::iStat][1] = Physics::Te[sector][ilayer];
+					Physics::statistics[CLine::iStat][2] = Physics::Ne[sector][ilayer];
+					Physics::statistics[CLine::iStat][3] = sector;
+					Physics::statistics[CLine::iStat][4] = ilayer;
+					
+					/*if(i == GrainTemp::nBins-1)
+					{
+						printf("%d (%d) GT: %le\n", CLine::iStat, i, Z);
+					}*/
+				
 				}
 				
 			}

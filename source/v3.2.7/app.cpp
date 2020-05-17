@@ -39,10 +39,12 @@ bool App::CalcCont = true;
 bool App::CalcOpac = false;
 bool App::CalcLines = true;
 bool App::CalcAbund = true;
-bool App::CalcGrainTemp = true; 
+bool App::CalcGrainTemp = true;
+bool App::CalcOverviews = true; 
 bool App::CalcIRBands = true;
 bool App::isStatMode = true;
 bool App::punchStatistics = false;
+bool App::printBands = false;
 
 TRay App::rayToObj;
 TRay App::rayIntegration;
@@ -212,6 +214,11 @@ bool App::readCommands()
 				sscanf(commands[2],"%s",&App::output_dir);
 				sscanf(commands[2],"%s",&App::output_dir_in);
 			}
+			else
+			if(strcmp(commands[1],"bands") == 0)
+			{
+				App::printBands = true;
+			}
 		}
 		else
 		if(strcmp(commands[0],"input") == 0)
@@ -261,10 +268,13 @@ bool App::readCommands()
 		
 		commands = CReader::read_commands(F);
 	};
+
+	printf("preDONE\n");
 	
 	fclose(F);
 
 	App::setRay(App::phi, App::theta);
 
+	printf("DONE\n");
 	return true;
 }

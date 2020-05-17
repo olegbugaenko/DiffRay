@@ -1,0 +1,640 @@
+In file included from abund.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+abund.cpp: In static member function ‘static int Abund::refreshStatistics()’:
+abund.cpp:33:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+abund.cpp: In static member function ‘static int Abund::initSectorials(int)’:
+abund.cpp:40:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+abund.cpp: In static member function ‘static int Abund::putAbunds(int)’:
+abund.cpp:87:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+abund.cpp: In static member function ‘static int Abund::getRadii(int)’:
+abund.cpp:92:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+abund.cpp: In static member function ‘static int Abund::getElementList(int, char*)’:
+abund.cpp:120:45: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[14]’ [-Wformat=]
+   while (sscanf(data, "%s%n", &abel, &offset) == 1)
+                                             ^
+In file included from app.h:3:0,
+                 from app.cpp:2:
+geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
+geom3d.h:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+app.cpp: At global scope:
+app.cpp:10:25: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *App::model_name = "wew";
+                         ^~~~~
+app.cpp:11:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char *App::data_suffix = "Age60.00Myr.dat";
+                          ^~~~~~~~~~~~~~~~~
+app.cpp: In static member function ‘static bool App::addApperture(double, double, double, double)’:
+app.cpp:73:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+app.cpp: In static member function ‘static bool App::init()’:
+app.cpp:80:10: warning: variable ‘angle’ set but not used [-Wunused-but-set-variable]
+  vector3 angle = vector3(0, M_PI + App::phi, App::theta);
+          ^~~~~
+app.cpp:88:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+app.cpp: In static member function ‘static bool App::initAperture(int)’:
+app.cpp:115:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+app.cpp: In static member function ‘static bool App::setRay(double, double)’:
+app.cpp:121:10: warning: variable ‘angle’ set but not used [-Wunused-but-set-variable]
+  vector3 angle = vector3(0, M_PI + phi, theta);
+          ^~~~~
+app.cpp:133:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+app.cpp: In static member function ‘static bool App::readCommands()’:
+app.cpp:163:45: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::pointsFile);
+                                             ^
+app.cpp:240:45: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::output_dir);
+                                             ^
+app.cpp:241:48: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::output_dir_in);
+                                                ^
+app.cpp:251:49: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2], "%s", &App::fluxesOutput);
+                                                 ^
+app.cpp:260:44: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::input_dir);
+                                            ^
+app.cpp:265:44: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::data_base);
+                                            ^
+app.cpp:270:45: warning: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘char (*)[255]’ [-Wformat=]
+     sscanf(commands[2],"%s",&App::data_bands);
+                                             ^
+basics.cpp: In static member function ‘static int CBasics::startClock()’:
+basics.cpp:56:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+basics.cpp: In static member function ‘static int CBasics::endClock()’:
+basics.cpp:65:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from app.h:3:0,
+                 from continuum.h:5,
+                 from continuum.cpp:3:
+geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
+geom3d.h:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+In file included from continuum.cpp:3:0:
+continuum.h: At global scope:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+continuum.h: In member function ‘int IRBand::read_band(char*, char*)’:
+continuum.h:32:43: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char*’ [-Wformat=]
+    printf("NM: %d, LB: %s\n",fname, blabel);
+                                           ^
+continuum.h:69:55: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+      printf("%s %s -> %s %s %d\n", bl1, bl2, name, len);
+                                                       ^
+continuum.h:103:10: warning: unused variable ‘line’ [-Wunused-variable]
+     char line[100];
+          ^~~~
+In file included from continuum.cpp:4:0:
+geometry.h: At global scope:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+continuum.cpp: In static member function ‘static int CContinuum::refreshStatistics()’:
+continuum.cpp:32:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::initSectorials(int)’:
+continuum.cpp:53:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::setMeshSize(int)’:
+continuum.cpp:113:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::getRadii(int)’:
+continuum.cpp:164:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::readBands()’:
+continuum.cpp:272:26: warning: unknown escape sequence: '\.'
+       sscanf(ent->d_name," %[^\t\n\.]",fnamebase);
+                          ^~~~~~~~~~~~~
+continuum.cpp:273:77: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat=]
+       printf ("FILE - %s %d %s\n", fnamebase, strlen(fnamebase), ent->d_name);
+                                                                             ^
+continuum.cpp: In static member function ‘static int CContinuum::assignBands()’:
+continuum.cpp:325:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::getIonizingSourceEmissivity()’:
+continuum.cpp:378:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+continuum.cpp: In static member function ‘static int CContinuum::readBands()’:
+continuum.cpp:288:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from continuum.cpp:3:0:
+continuum.h: In member function ‘int IRBand::read_band(char*, char*)’:
+continuum.h:137:3: warning: control reaches end of non-void function [-Wreturn-type]
+   }
+   ^
+continuum.cpp: In static member function ‘static int CContinuum::readInwardFluxes(char*)’:
+continuum.cpp:370:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from integration.h:3:0,
+                 from diffray.cpp:2:
+solver.h:1:13: warning: extra tokens at end of #pragma directive
+ #pragma once;
+             ^
+In file included from integration.h:2:0,
+                 from diffray.cpp:2:
+geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
+geom3d.h:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+In file included from integration.h:5:0,
+                 from diffray.cpp:2:
+geometry.h: At global scope:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from integration.h:6:0,
+                 from diffray.cpp:2:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+continuum.h: In member function ‘int IRBand::read_band(char*, char*)’:
+continuum.h:32:43: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char*’ [-Wformat=]
+    printf("NM: %d, LB: %s\n",fname, blabel);
+                                           ^
+continuum.h:69:55: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+      printf("%s %s -> %s %s %d\n", bl1, bl2, name, len);
+                                                       ^
+continuum.h:103:10: warning: unused variable ‘line’ [-Wunused-variable]
+     char line[100];
+          ^~~~
+diffray.cpp: In static member function ‘static int CDiffRay::runDiffRay(bool, int)’:
+diffray.cpp:392:74: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 2 has type ‘int’ [-Wformat=]
+      printf("ATTEMPT_BAND_FILE %ld, %ld\n", cBand.iNuLeft, cBand.iNuRight);
+                                                                          ^
+diffray.cpp:392:74: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 3 has type ‘int’ [-Wformat=]
+diffray.cpp:1054:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+diffray.cpp: In static member function ‘static int CDiffRay::initializePoints()’:
+diffray.cpp:68:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+diffray.cpp: In static member function ‘static int CDiffRay::launch()’:
+diffray.cpp:84:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+diffray.cpp: In static member function ‘static int CDiffRay::runDiffRay(bool, int)’:
+diffray.cpp:424:22: warning: ‘bandFile’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+      fclose(bandFile);
+                      ^
+In file included from geom3D.cpp:2:0:
+geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
+geom3d.h:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+geom3D.cpp: In function ‘THalfplane create(TPlane, vector3, int)’:
+geom3D.cpp:300:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geom3D.cpp: In function ‘THalfplane createFromAngles(double, double, double)’:
+geom3D.cpp:310:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geom3D.cpp: In function ‘vector3 intersectHalfplane(TRay, THalfplane)’:
+geom3D.cpp:315:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geom3D.cpp: In function ‘vector3 intersectRayWithPhi(TRay, double)’:
+geom3D.cpp:328:10: warning: variable ‘axis’ set but not used [-Wunused-but-set-variable]
+  vector3 axis = makeOrt(0.0, M_PI/2.0);
+          ^~~~
+In file included from geometry.cpp:1:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from app.h:3:0,
+                 from geometry.cpp:2:
+geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
+geom3d.h:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+geometry.cpp: In static member function ‘static int CGeometry::readSectors(char*)’:
+geometry.cpp:18:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geometry.cpp: In static member function ‘static int CGeometry::readRadiuses(char*, int)’:
+geometry.cpp:25:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    CGeometry::readSectors();
+                           ^
+geometry.cpp: In static member function ‘static int CGeometry::getRadii(int)’:
+geometry.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+geometry.cpp: In static member function ‘static int CGeometry::readRadiuses(char*, int)’:
+geometry.cpp:46:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+In file included from grain_temp.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from app.h:3:0,
+                 from grain_temp.cpp:6:
+geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
+geom3d.h:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+grain_temp.cpp: In static member function ‘static int GrainTemp::refreshStatistics()’:
+grain_temp.cpp:32:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+grain_temp.cpp: In static member function ‘static int GrainTemp::initSectorials(int)’:
+grain_temp.cpp:42:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+grain_temp.cpp: In static member function ‘static int GrainTemp::putTemps(int)’:
+grain_temp.cpp:90:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+grain_temp.cpp: In static member function ‘static int GrainTemp::getRadii(int)’:
+grain_temp.cpp:95:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from integration.cpp:3:0:
+solver.h:1:13: warning: extra tokens at end of #pragma directive
+ #pragma once;
+             ^
+integration.cpp:13:20: fatal error: matrix.h: Немає такого файла або каталогу
+ #include "matrix.h"
+                    ^
+compilation terminated.
+In file included from rt.h:3:0,
+                 from iterator.cpp:2:
+solver.h:1:13: warning: extra tokens at end of #pragma directive
+ #pragma once;
+             ^
+In file included from rt.h:2:0,
+                 from iterator.cpp:2:
+geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
+geom3d.h:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+In file included from iterator.cpp:3:0:
+geometry.h: At global scope:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from iterator.cpp:4:0:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+continuum.h: In member function ‘int IRBand::read_band(char*, char*)’:
+continuum.h:32:43: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char*’ [-Wformat=]
+    printf("NM: %d, LB: %s\n",fname, blabel);
+                                           ^
+continuum.h:69:55: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+      printf("%s %s -> %s %s %d\n", bl1, bl2, name, len);
+                                                       ^
+continuum.h:103:10: warning: unused variable ‘line’ [-Wunused-variable]
+     char line[100];
+          ^~~~
+iterator.cpp: In static member function ‘static int CIteration::obtainStatistics()’:
+iterator.cpp:21:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+iterator.cpp: In static member function ‘static int CIteration::initIteration(int)’:
+iterator.cpp:54:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+iterator.cpp: In static member function ‘static int CIteration::doIteration()’:
+iterator.cpp:87:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from lines.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from app.h:3:0,
+                 from lines.cpp:6:
+geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
+geom3d.h:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+lines.cpp: In static member function ‘static int CLine::refreshStatistics()’:
+lines.cpp:35:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+lines.cpp: In static member function ‘static int CLine::initSectorials(int)’:
+lines.cpp:42:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+lines.cpp: In static member function ‘static int CLine::putLine(int)’:
+lines.cpp:95:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+lines.cpp: In static member function ‘static int CLine::getRadii(int)’:
+lines.cpp:100:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+lines.cpp: In static member function ‘static int CLine::getLineList(int, char*)’:
+lines.cpp:120:6: warning: unused variable ‘idSorted’ [-Wunused-variable]
+  int idSorted[100];
+      ^~~~~~~~
+lines.cpp: In static member function ‘static int CLine::readDatabase()’:
+lines.cpp:227:6: warning: unused variable ‘nC2’ [-Wunused-variable]
+  int nC2    = CReader::calc_lines_number(LDB2,15);
+      ^~~
+lines.cpp:300:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+main.cpp:5:17: warning: extra tokens at end of #include directive
+ #include "app.h";
+                 ^
+main.cpp:6:23: warning: extra tokens at end of #include directive
+ #include "continuum.h";
+                       ^
+main.cpp:7:20: warning: extra tokens at end of #include directive
+ #include "geom3d.h";
+                    ^
+main.cpp:8:20: warning: extra tokens at end of #include directive
+ #include "solver.h";
+                    ^
+In file included from main.cpp:8:0:
+solver.h:1:13: warning: extra tokens at end of #pragma directive
+ #pragma once;
+             ^
+main.cpp:9:21: warning: extra tokens at end of #include directive
+ #include "diffray.h";
+                     ^
+main.cpp:10:19: warning: extra tokens at end of #include directive
+ #include "abund.h";
+                   ^
+main.cpp:11:24: warning: extra tokens at end of #include directive
+ #include "grain_temp.h";
+                        ^
+In file included from main.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from app.h:3:0,
+                 from main.cpp:5:
+geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
+geom3d.h:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+In file included from main.cpp:6:0:
+continuum.h: At global scope:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+continuum.h: In member function ‘int IRBand::read_band(char*, char*)’:
+continuum.h:32:43: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char*’ [-Wformat=]
+    printf("NM: %d, LB: %s\n",fname, blabel);
+                                           ^
+continuum.h:69:55: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+      printf("%s %s -> %s %s %d\n", bl1, bl2, name, len);
+                                                       ^
+continuum.h:103:10: warning: unused variable ‘line’ [-Wunused-variable]
+     char line[100];
+          ^~~~
+main.cpp: In function ‘int main(int, char**)’:
+main.cpp:55:11: warning: unused variable ‘resarr’ [-Wunused-variable]
+  double **resarr;
+           ^~~~~~
+In file included from physics.cpp:4:0:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+physics.cpp: In static member function ‘static int Physics::refreshStatistics()’:
+physics.cpp:26:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+physics.cpp: In static member function ‘static int Physics::initSectorials(int)’:
+physics.cpp:35:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+physics.cpp: In static member function ‘static int Physics::putPhysics(int)’:
+physics.cpp:80:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+physics.cpp: In static member function ‘static int Physics::getRadii(int)’:
+physics.cpp:85:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+reader.cpp: In static member function ‘static int CReader::read_file_array(FILE*, int, int, int, int (*)(int), int (*)(int), int (*)(int, int, double), int (*)(int, char*))’:
+reader.cpp:157:46: warning: too many arguments for format [-Wformat-extra-args]
+   while ( sscanf(ptr, "%s[\t\n]", strdata, &n) == 1 && !iSkip)
+                                              ^
+reader.cpp:116:9: warning: unused variable ‘val’ [-Wunused-variable]
+  double val;
+         ^~~
+reader.cpp: In static member function ‘static int CReader::callable(int)’:
+reader.cpp:188:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from rt.cpp:3:0:
+solver.h:1:13: warning: extra tokens at end of #pragma directive
+ #pragma once;
+             ^
+rt.cpp:187:52: warning: "/*" within comment [-Wcomment]
+     CRT::ray_intr[ic] = CContinuum::in_fluxes[ic];//*App::cov_fac;
+                                                     
+In file included from rt.cpp:2:0:
+geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
+geom3d.h:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+In file included from rt.cpp:5:0:
+geometry.h: At global scope:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from rt.cpp:6:0:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+continuum.h: In member function ‘int IRBand::read_band(char*, char*)’:
+continuum.h:32:43: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char*’ [-Wformat=]
+    printf("NM: %d, LB: %s\n",fname, blabel);
+                                           ^
+continuum.h:69:55: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+      printf("%s %s -> %s %s %d\n", bl1, bl2, name, len);
+                                                       ^
+continuum.h:103:10: warning: unused variable ‘line’ [-Wunused-variable]
+     char line[100];
+          ^~~~
+rt.cpp: In static member function ‘static int CRT::calc_ray(int)’:
+rt.cpp:39:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+rt.cpp: In static member function ‘static int CRT::obtainContinua()’:
+rt.cpp:84:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+rt.cpp: In static member function ‘static int CRT::calc_cont(int)’:
+rt.cpp:247:11: warning: unused variable ‘emct’ [-Wunused-variable]
+    double emct = 0.0;
+           ^~~~
+rt.cpp:525:12: warning: unused variable ‘Z’ [-Wunused-variable]
+     double Z = 0.;
+            ^
+rt.cpp:562:76: warning: ‘FP_DUMP’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   fprintf(FP_DUMP, "TOTAL: %le; at: %le\n", CRT::ray_intr[2481],path_total);
+                                                                            ^
+In file included from solver.cpp:3:0:
+solver.h:1:13: warning: extra tokens at end of #pragma directive
+ #pragma once;
+             ^
+In file included from solver.cpp:2:0:
+geom3d.h: In member function ‘bool Apperture::reset(double, double, double, double)’:
+geom3d.h:160:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^
+In file included from solver.cpp:4:0:
+geometry.h: At global scope:
+geometry.h:11:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  static int readSectors(char fpattern[500] = "");
+                                              ^~
+In file included from integration.h:6:0,
+                 from solver.cpp:5:
+continuum.h:16:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double totalLum = 0.;
+                     ^~
+continuum.h:17:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   double lumYan = 0.;
+                   ^~
+continuum.h: In member function ‘int IRBand::read_band(char*, char*)’:
+continuum.h:32:43: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char*’ [-Wformat=]
+    printf("NM: %d, LB: %s\n",fname, blabel);
+                                           ^
+continuum.h:69:55: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+      printf("%s %s -> %s %s %d\n", bl1, bl2, name, len);
+                                                       ^
+continuum.h:103:10: warning: unused variable ‘line’ [-Wunused-variable]
+     char line[100];
+          ^~~~
+solver.cpp: In static member function ‘static int CSolver::getPointsCones()’:
+solver.cpp:204:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+solver.cpp: In static member function ‘static int CSolver::getPointsSectors()’:
+solver.cpp:357:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+solver.cpp: In static member function ‘static int CSolver::getPoints()’:
+solver.cpp:484:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from solver.cpp:3:0:
+solver.h: In static member function ‘static int CSolver::getPointsCones()’:
+solver.h:5:8: warning: ‘curpoint.intersection::is’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ struct intersection
+        ^~~~~~~~~~~~
+solver.cpp:172:18: note: ‘curpoint.intersection::is’ was declared here
+     intersection curpoint;
+                  ^~~~~~~~
+In file included from solver.cpp:3:0:
+solver.h:5:8: warning: ‘curpoint.intersection::phi’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ struct intersection
+        ^~~~~~~~~~~~
+solver.cpp:172:18: note: ‘curpoint.intersection::phi’ was declared here
+     intersection curpoint;
+                  ^~~~~~~~
+In file included from solver.cpp:3:0:
+solver.h: In static member function ‘static int CSolver::getPointsSectors()’:
+solver.h:5:8: warning: ‘curpoint.intersection::is’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ struct intersection
+        ^~~~~~~~~~~~
+solver.cpp:325:17: note: ‘curpoint.intersection::is’ was declared here
+    intersection curpoint;
+                 ^~~~~~~~
+In file included from solver.cpp:3:0:
+solver.h:5:8: warning: ‘curpoint.intersection::phi’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ struct intersection
+        ^~~~~~~~~~~~
+solver.cpp:325:17: note: ‘curpoint.intersection::phi’ was declared here
+    intersection curpoint;
+                 ^~~~~~~~
+diffray.o: у функції «CDiffRay::runDiffRay(bool, int)»:
+diffray.cpp:(.text+0x32a): невизначене посилання «CIntegration::lumfactor»
+diffray.cpp:(.text+0x332): невизначене посилання «CIntegration::lumfactor»
+diffray.cpp:(.text+0x3e3): невизначене посилання «CIntegration::flux_lines»
+diffray.cpp:(.text+0x3f9): невизначене посилання «CIntegration::lumfactor»
+diffray.cpp:(.text+0x42b): невизначене посилання «CIntegration::flux_lines»
+diffray.cpp:(.text+0x45e): невизначене посилання «CIntegration::lumfactor»
+diffray.cpp:(.text+0x56e): невизначене посилання «CIntegration::lumfactor»
+diffray.cpp:(.text+0x59f): невизначене посилання «CIntegration::lumfactor»
+diffray.cpp:(.text+0x7b6): невизначене посилання «CIntegration::flux_lines»
+diffray.cpp:(.text+0xbda): невизначене посилання «CIntegration::flux_continua»
+diffray.cpp:(.text+0xbfa): невизначене посилання «CIntegration::flux_intrinsic»
+diffray.cpp:(.text+0xc07): невизначене посилання «CIntegration::flux_transitions»
+diffray.cpp:(.text+0xe02): невизначене посилання «CIntegration::flux_lines»
+diffray.cpp:(.text+0xe25): невизначене посилання «CIntegration::lumfactor»
+diffray.cpp:(.text+0xe91): невизначене посилання «CIntegration::flux_lines»
+diffray.cpp:(.text+0xebc): невизначене посилання «CIntegration::lumfactor»
+diffray.cpp:(.text+0x1277): невизначене посилання «CIntegration::flux_intrinsic»
+diffray.cpp:(.text+0x12a3): невизначене посилання «CIntegration::flux_transitions»
+diffray.cpp:(.text+0x12b0): невизначене посилання «CIntegration::flux_continua»
+diffray.cpp:(.text+0x1357): невизначене посилання «CIntegration::lumfactor»
+diffray.cpp:(.text+0x13c3): невизначене посилання «CIntegration::flux_continua»
+diffray.cpp:(.text+0x13e8): невизначене посилання «CIntegration::flux_intrinsic»
+diffray.cpp:(.text+0x18ea): невизначене посилання «CIntegration::flux_continua»
+iterator.o: у функції «CIteration::initIteration(int)»:
+iterator.cpp:(.text+0x181): невизначене посилання «CIntegration::flux_continua»
+iterator.cpp:(.text+0x1a3): невизначене посилання «CIntegration::flux_lines»
+iterator.cpp:(.text+0x1c5): невизначене посилання «CIntegration::flux_transitions»
+iterator.cpp:(.text+0x1e7): невизначене посилання «CIntegration::flux_intrinsic»
+iterator.o: у функції «CIteration::doIteration()»:
+iterator.cpp:(.text+0x415): невизначене посилання «CIntegration::InitIntegration(int, int)»
+iterator.cpp:(.text+0x41a): невизначене посилання «CIntegration::doCalc()»
+iterator.cpp:(.text+0x42f): невизначене посилання «CIntegration::flux_lines»
+iterator.cpp:(.text+0x4df): невизначене посилання «CIntegration::flux_continua»
+iterator.o: у функції «CIteration::obtainStatistics()»:
+iterator.cpp:(.text+0x1): невизначене посилання «CIntegration::statisticRay()»
+iterator.o: у функції «CIteration::doIteration()»:
+iterator.cpp:(.text+0x581): невизначене посилання «CIntegration::finish()»
+iterator.cpp:(.text+0x5a9): невизначене посилання «CIntegration::finish()»
+rt.o: у функції «CRT::calc_cont(int)»:
+rt.cpp:(.text+0x653): невизначене посилання «CIntegration::isCentralRay»
+rt.cpp:(.text+0x115d): невизначене посилання «CIntegration::nRay»
+collect2: error: ld returned 1 exit status
+cp: не вдалося виконати stat для 'DiffRay3D.exe': Немає такого файла або каталогу
+cp: не вдалося виконати stat для 'DiffRay3D.exe': Немає такого файла або каталогу
