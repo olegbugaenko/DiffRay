@@ -86,7 +86,7 @@ int CStatistics::run()
 
 		path_total += CSolver::paths[ish].path;
 
-		//if(!App::isStatMode)
+		if(App::CalcAbund)
 		{
 			double Z_H = 0.;
 			double ems_O = 0.;
@@ -127,29 +127,33 @@ int CStatistics::run()
 			CLine::statistics[CLine::iStat][0] = path_total;
 			GrainTemp::statistics[CLine::iStat][0] = path_total;	
 			Physics::statistics[CLine::iStat][0] = path_total;	
-			CContinuum::statistics[CLine::iStat][0] = path_total;	
-			
-			for(int i=0;i<Abund::nElements;i++)
+			CContinuum::statistics[CLine::iStat][0] = path_total;
+
+			if(App::CalcAbund)	
 			{
-				double Z = 0.;
-
-				if(sector > -1 && ilayer > -1)
+				for(int i=0;i<Abund::nElements;i++)
 				{
+					double Z = 0.;
 
+					if(sector > -1 && ilayer > -1)
+					{
+
+						
+						Z = Abund::abundances[sector][ilayer][i];
+						Abund::statistics[CLine::iStat][i+1] = Z;
+					}
+
+					if(i==0 && Z > pow(10.0, -2.0) && App::iApp == 5)
+					{
+						printf("App%d peak: %le at %d;%d path=%Le\n",App::iApp,Z,sector,ilayer,CSolver::paths[ish].path);
+						printf("iRay: %d; point: %d of %d\n", CIntegration::nRay, ish, CSolver::npoints);
+						printf("Struct data: \n");
+						printf("%d: Sector: %d; Layer: %d; P=%Le\n", ish, CSolver::paths[ish].sector, CSolver::paths[ish].layer,CSolver::paths[ish].path);
+					}
 					
-					Z = Abund::abundances[sector][ilayer][i];
-					Abund::statistics[CLine::iStat][i+1] = Z;
 				}
-
-				if(i==0 && Z > pow(10.0, -2.0) && App::iApp == 5)
-				{
-					printf("App%d peak: %le at %d;%d path=%Le\n",App::iApp,Z,sector,ilayer,CSolver::paths[ish].path);
-					printf("iRay: %d; point: %d of %d\n", CIntegration::nRay, ish, CSolver::npoints);
-					printf("Struct data: \n");
-					printf("%d: Sector: %d; Layer: %d; P=%Le\n", ish, CSolver::paths[ish].sector, CSolver::paths[ish].layer,CSolver::paths[ish].path);
-				}
-				
 			}
+			
 			
 
 			for(int i=0;i<CLine::linesCount;i++)
@@ -181,32 +185,36 @@ int CStatistics::run()
 				
 			}
 			
-			double Z_H = 0.;
-			if(sector > -1 && ilayer > -1)
+			if(App::CalcAbund && App::CalcGrainTemp)
 			{
-				Z_H = CSolver::paths[ish].path*Abund::abundances[sector][ilayer][0];
-			}
-			
-			for(int i=0;i<GrainTemp::nBins;i++)
-			{
-				double Z = 0.;
-
+				double Z_H = 0.;
 				if(sector > -1 && ilayer > -1)
 				{
-					Z = GrainTemp::gridTemps[sector][ilayer][i];
-					/*if(i == GrainTemp::nBins-1)
-					{
-						printf("%d (%d) GT: %le\n", CLine::iStat, i, Z);
-					}*/
-					
-					GrainTemp::statistics[CLine::iStat][i+1] = Z;
-					GrainTemp::massWeighted[i] += Z*Z_H;
-					//printf("S: %d/19, L: %d, B: %d (%d) %le %le\n", sector, ilayer, i, GrainTemp::nBins, Z_H, Z*Z_H);
-					
+					Z_H = CSolver::paths[ish].path*Abund::abundances[sector][ilayer][0];
 				}
 				
+				for(int i=0;i<GrainTemp::nBins;i++)
+				{
+					double Z = 0.;
+
+					if(sector > -1 && ilayer > -1)
+					{
+						Z = GrainTemp::gridTemps[sector][ilayer][i];
+						/*if(i == GrainTemp::nBins-1)
+						{
+							printf("%d (%d) GT: %le\n", CLine::iStat, i, Z);
+						}*/
+						
+						GrainTemp::statistics[CLine::iStat][i+1] = Z;
+						GrainTemp::massWeighted[i] += Z*Z_H;
+						//printf("S: %d/19, L: %d, B: %d (%d) %le %le\n", sector, ilayer, i, GrainTemp::nBins, Z_H, Z*Z_H);
+						
+					}
+					
+				}
+				GrainTemp::massTotal += Z_H;
 			}
-			GrainTemp::massTotal += Z_H;
+			
 			if(App::CalcOverviews)
 			{
 				if(sector > -1 && ilayer > -1)

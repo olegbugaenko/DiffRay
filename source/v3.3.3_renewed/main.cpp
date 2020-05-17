@@ -129,8 +129,11 @@ int main(int argc, char **argv)
 		sprintf(inflname, "%s/Continuum%d_SB99_Age%.2lfMyr.dat",App::input_dir,iReadSect+1,App::age);
 		sprintf(intempfile, "%s/Grain_Temp%d_Age%.2lfMyr.dat",App::input_dir,iReadSect+1,App::age);
 
-		Physics::readPhysics(ovrflname, i);
-
+		if(App::CalcOverviews)
+		{
+			Physics::readPhysics(ovrflname, i);
+		}
+		
 
 		if(App::CalcCont)
 		{

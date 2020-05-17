@@ -101,7 +101,10 @@ int CDiffRay::runDiffRay(bool usePoints, int nPoint)
 		Abund::refreshStatistics();
 		CLine::refreshStatistics();
 		GrainTemp::refreshStatistics();
-		Physics::refreshStatistics();
+		if(App::CalcOverviews) 
+		{
+			Physics::refreshStatistics();	
+		}
 		CContinuum::refreshStatistics();
 		
 		CDebugger::debug("Refreshed statistics");
@@ -167,7 +170,7 @@ int CDiffRay::runDiffRay(bool usePoints, int nPoint)
 		}
 		OutputHandler::isophotes();
 			
-		if(App::CalcLines)
+		if(App::CalcLines && App::CalcOverviews && App::CalcAbund)
 		{
 			char fname[255];
 			sprintf(fname,"%s/abmass.txt",App::output_dir);
@@ -413,21 +416,6 @@ int CDiffRay::runDiffRay(bool usePoints, int nPoint)
 		}
 	}
 	
-	/*
-	for(int ir=0; ir<1; ir++)
-	{
-		for(int is=1;is<CLine::iStat-1; is++)
-		{
-			if(Physics::statistics[is][1] < (Physics::statistics[is-1][1] + Physics::statistics[is+1][1])/3)
-			{
-				for(int k=1;k<=3;k++)
-				{
-					Physics::statistics[is][k] = (Physics::statistics[is-1][k] + Physics::statistics[is][k] + Physics::statistics[is+1][k])/2;
-				}
-			}
-		}
-	}
-	*/
 
 	for(int ir=0; ir<1; ir++)
 	{
@@ -859,134 +847,138 @@ int CDiffRay::runDiffRay(bool usePoints, int nPoint)
 		av[k] = 0.;
 	}
 
-	while(ic < CLine::iStat)
+	if(App::CalcOverviews)
 	{
-		double dR = 0.01;
-
-		for(int k=0;k<100;k++)
+		while(ic < CLine::iStat)
 		{
-			av[k] = 1.e-42;
-		}
-		int nElems = 0;
-		int maxSector = Physics::statistics[ikprev][3];
-		int maxLayer = Physics::statistics[ikprev][4];
-		double maxNe = Physics::statistics[ikprev][2];
+			double dR = 0.01;
 
-		while(dR < 1.e+19 && ik<CLine::iStat)
-		{
-			ik++;
-			dR = fabs(Physics::statistics[ik][0] - Physics::statistics[ikprev][0]);
-			if(Physics::statistics[ik][2] > maxNe) {
-				maxNe = Physics::statistics[ik][2];
-				maxSector = Physics::statistics[ik][3];
-				maxLayer = Physics::statistics[ik][4];
+			for(int k=0;k<100;k++)
+			{
+				av[k] = 1.e-42;
+			}
+			int nElems = 0;
+			int maxSector = Physics::statistics[ikprev][3];
+			int maxLayer = Physics::statistics[ikprev][4];
+			double maxNe = Physics::statistics[ikprev][2];
+
+			while(dR < 1.e+19 && ik<CLine::iStat)
+			{
+				ik++;
+				dR = fabs(Physics::statistics[ik][0] - Physics::statistics[ikprev][0]);
+				if(Physics::statistics[ik][2] > maxNe) {
+					maxNe = Physics::statistics[ik][2];
+					maxSector = Physics::statistics[ik][3];
+					maxLayer = Physics::statistics[ik][4];
+					
+				}
+				for(int k=1;k<3;k++)
+				{
+					av[k] += Physics::statistics[ik][k];
+				}
+				av[3] = maxSector;
+				av[4] = maxLayer;
+				av[5] = maxNe;
+				nElems++;
 				
 			}
+
+			ikprev = ik;
+
+			//printf("av: %le; n=%d; LC=%d\n",av[1], nElems, CLine::iStat);
+
 			for(int k=1;k<3;k++)
 			{
-				av[k] += Physics::statistics[ik][k];
+				Physics::statistics[ic][k] = av[k]/nElems;
 			}
-			av[3] = maxSector;
-			av[4] = maxLayer;
-			av[5] = maxNe;
-			nElems++;
+
+			for(int k=3;k<6;k++)
+			{
+				Physics::statistics[ic][k] = av[k];
+			}		
 			
+
+			if(ik >= CLine::iStat)
+			{
+				Physics::statistics[ic][0] = Physics::statistics[CLine::iStat-1][0];
+				nPhys = ic+1;
+				break;
+			}
+			else
+			{
+				Physics::statistics[ic][0] = Physics::statistics[ik][0];
+
+			}
+
+			ic++;
+
 		}
+		
+		CDebugger::debug("Physics selected: %d\n",nPhys);
 
-		ikprev = ik;
+		
+		nmaxchunk = 10;
 
-		//printf("av: %le; n=%d; LC=%d\n",av[1], nElems, CLine::iStat);
-
-		for(int k=1;k<3;k++)
+		for(int is=1;is<nPhys-1; is++)
 		{
-			Physics::statistics[ic][k] = av[k]/nElems;
+			//determine where we need to smooth
+			if(nmaxchunk > nPhys - 1 - is)
+			{
+				nmaxchunk = nPhys - 1 - is;
+			}
+			for(int ils = is; ils < is + nmaxchunk; ils++)
+			{
+				//printf("LT: %le; %le; %le\n", Physics::statistics[ils][1], Physics::statistics[is][1], Physics::statistics[is+nmaxchunk][1]);
+				if(Physics::statistics[ils][1] < 0.5*Physics::statistics[is][1] 
+				    && Physics::statistics[ils][1] < 0.5*Physics::statistics[is+nmaxchunk][1])
+				{
+					for(int k=1;k<=3;k++)
+					{
+						Physics::statistics[ils][k] = (Physics::statistics[is][k] + Physics::statistics[ils][k] + Physics::statistics[is+nmaxchunk][k])/3;
+					}
+					//printf("NW: %le; %le; %le\n", Physics::statistics[ils][1], Physics::statistics[is][1], Physics::statistics[is+nmaxchunk][1]);
+					//printf("c: %d; P: %le\n",ils, Physics::statistics[ils][0]);
+				}/*
+				if(pow(Physics::statistics[ils][1]-AVG,2)/pow(AVG,2) > 0.5)
+				{
+					for(int k=1;k<=3;k++)
+					{
+						Physics::statistics[ils][k] = (Physics::statistics[ils-1][k] + Physics::statistics[ils][k] + Physics::statistics[ils+1][k])/3;
+					}
+				}*/
+			}
 		}
-
-		for(int k=3;k<6;k++)
-		{
-			Physics::statistics[ic][k] = av[k];
-		}		
 		
 
-		if(ik >= CLine::iStat)
+		i = 0;
+
+		char fnamephys[255];
+		sprintf(fnamephys,"%s/phys_distribution.txt",App::output_dir);
+		int ipc = 0;
+		FILE *OverviewF;
+		CDebugger::debug("TC: %d\n",CLine::iStat);
+		OverviewF = fopen(fnamephys, "w+");
+		while(i<nPhys && i<500000)
 		{
-			Physics::statistics[ic][0] = Physics::statistics[CLine::iStat-1][0];
-			nPhys = ic+1;
-			break;
-		}
-		else
-		{
-			Physics::statistics[ic][0] = Physics::statistics[ik][0];
-
-		}
-
-		ic++;
-
-	}
-	
-	CDebugger::debug("Physics selected: %d\n",nPhys);
-
-	
-	nmaxchunk = 10;
-
-	for(int is=1;is<nPhys-1; is++)
-	{
-		//determine where we need to smooth
-		if(nmaxchunk > nPhys - 1 - is)
-		{
-			nmaxchunk = nPhys - 1 - is;
-		}
-		for(int ils = is; ils < is + nmaxchunk; ils++)
-		{
-			//printf("LT: %le; %le; %le\n", Physics::statistics[ils][1], Physics::statistics[is][1], Physics::statistics[is+nmaxchunk][1]);
-			if(Physics::statistics[ils][1] < 0.5*Physics::statistics[is][1] 
-			    && Physics::statistics[ils][1] < 0.5*Physics::statistics[is+nmaxchunk][1])
+			if(Physics::statistics[i][0] > 1.e-35 && Physics::statistics[i][0] < 1.e+25)
 			{
-				for(int k=1;k<=3;k++)
+				if(ipc > 0)
 				{
-					Physics::statistics[ils][k] = (Physics::statistics[is][k] + Physics::statistics[ils][k] + Physics::statistics[is+nmaxchunk][k])/3;
+					int j = 0;
+					while(j <= 6)
+					{
+						fprintf(OverviewF, "%le\t", Physics::statistics[i][j]);
+						j++;
+					}
+					fprintf(OverviewF, "\n");
 				}
-				//printf("NW: %le; %le; %le\n", Physics::statistics[ils][1], Physics::statistics[is][1], Physics::statistics[is+nmaxchunk][1]);
-				//printf("c: %d; P: %le\n",ils, Physics::statistics[ils][0]);
-			}/*
-			if(pow(Physics::statistics[ils][1]-AVG,2)/pow(AVG,2) > 0.5)
-			{
-				for(int k=1;k<=3;k++)
-				{
-					Physics::statistics[ils][k] = (Physics::statistics[ils-1][k] + Physics::statistics[ils][k] + Physics::statistics[ils+1][k])/3;
-				}
-			}*/
-		}
-	}
-	
-
-	i = 0;
-
-	char fnamephys[255];
-	sprintf(fnamephys,"%s/phys_distribution.txt",App::output_dir);
-	int ipc = 0;
-	FILE *OverviewF;
-	CDebugger::debug("TC: %d\n",CLine::iStat);
-	OverviewF = fopen(fnamephys, "w+");
-	while(i<nPhys && i<500000)
-	{
-		if(Physics::statistics[i][0] > 1.e-35 && Physics::statistics[i][0] < 1.e+25)
-		{
-			if(ipc > 0)
-			{
-				int j = 0;
-				while(j <= 6)
-				{
-					fprintf(OverviewF, "%le\t", Physics::statistics[i][j]);
-					j++;
-				}
-				fprintf(OverviewF, "\n");
+				ipc++;
 			}
-			ipc++;
+			i++;
 		}
-		i++;
+		fclose(OverviewF);
 	}
-	fclose(OverviewF);
+	
 
 	CIteration::finalizeIterations();
 	CDebugger::log("Iteratiom was finished!");
